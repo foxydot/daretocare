@@ -3,35 +3,51 @@ Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-  .arrow-up(@blue);
-  border-top: 8px solid @blue;
-  background-color: @offwhite;
-  background-image: url(../img/demo-bkg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  color: @dkgrey;
+  background-color: @green;
+  color: @white;
   clear: both;
-  padding: 0;
+  padding: 2rem 0;
+  .customheader(1.2);
   a {
-    color: @dkgrey;
+    color: @white;
   }
   
   a:hover {
-    color: @mdgrey;
+    color: @white;
   }
   
   .widget {
     margin: 0 auto;
-    float: none;
-    clear: both;
+    float: left;
+    display: inline-block;
   }
   
   .widget-title {
     font-size: 2.8rem;
     font-weight: 300;
   }
-  
+  .widget.widget_sp_image{
+    margin: 0 1.6rem;
+    .widget-title{
+      display: none;
+    }
+  }
+  .widget.logo{
+    background-image: url(../img/logo.svg);
+    background-size: 150px auto;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 165px;
+    padding-right: 1.2rem;
+    border-right: 1px solid @white;
+    margin-right: 1.2rem;
+    h3{
+      display: none;
+    }
+  }
+  .widget.msd-connected.last-child{
+    max-width: 80px;
+  }
   li {
     list-style-type: none;
     margin-bottom: 6px;
@@ -89,73 +105,6 @@ Footer Widgets
       display: block;
     }
   }  
-  .connected-social{
-    .social-media{
-      float: right;
-      a.fa{
-        background: none;
-        border: 1px solid lighten(@blue,50%);
-        border-radius: 100%;
-        margin: 10px;
-        height: 50px;
-        width: 50px;
-        font-size: 3rem;
-        line-height: 1.6;
-      }
-      a.fa.last-child{
-        margin-right: 0;
-      }
-      a.fa:hover{
-        border-color: darken(@blue,10%);
-      }
-          
-       a.fa-facebook:hover{
-         background-color:@facebook;
-       }
-       a.fa-twitter:hover{
-         background-color:@twitter;
-       }
-       a.fa-pinterest:hover{
-         background-color:@pinterest;
-       }
-       a.fa-google-plus:hover{
-         background-color:@google;
-       }
-       a.fa-linkedin:hover{
-         background-color:@linkedin;
-       }
-       a.fa-instagram:hover{
-         background-color:@instagram;
-       }
-       a.fa-tumblr:hover{
-         background-color:@tumblr;
-       }
-       a.fa-reddit:hover{
-         background-color:@reddit;
-       }
-       a.fa-flickr:hover{
-         background-color:@flickr;
-       }
-       a.fa-youtube:hover{
-         background-color:@youtube;
-       }
-       a.fa-vimeo-square:hover{
-         background-color:@vimeo;
-       }
-       a.fa-vine:hover{
-         background-color:@vine;
-       }
-       a.fa-share-alt:hover{
-         background-color:@sharethis;
-       }
-       a.fa-envelope:hover{
-         background-color:@contact;
-       }
-       a.fa-rss:hover{
-         background-color:@rss;
-       }
-    }
-  }
   .search-form input:focus {
     border: 0 solid #ddd;
   }

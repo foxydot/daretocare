@@ -24,7 +24,7 @@ Site Navigation
     }
    }
    .current-menu-item>a{
-     color: @blue;
+     color: @green;
    }
 }
 
@@ -117,29 +117,25 @@ Site Navigation
 
 .nav-primary {
   .customheader(1.4);
-  background: @blue;
+  width: 60%;
+  float: left;
+  margin-top: 1.6rem;
+  text-align: right;
   li.menu-item{
     padding: 0;
     a{
-      padding: 1rem 2.2rem;
-      color: @offwhite;
-      border-bottom: 6px solid transparent;
-      text-transform: uppercase;
-    }
-    &.first-child a{
-      padding-left: 0;
-    }
-    &.last-child a{
-      padding-right: 0;
+      padding: 0rem 2.2rem;
+      color: @medgrey;   
     }
     .sub-menu{
-      background-color: @white;
+      background-color: lighten(@green,40%);
       margin-top: 0px;
-      .box-shadow(0 10px 10px rgba(20,20,20,0.5));
+      margin-left: 4rem;
+      .box-shadow(0 6px 6px rgba(20,20,20,0.5));
       li.menu-item{
-        background-color: @white;
         padding: 0 2rem;
         width: 100%;
+        border-bottom: 1px solid lighten(@green, 30%);
         a{
           background-color: transparent;
           border: 0;
@@ -156,26 +152,24 @@ Site Navigation
         text-decoration: none;
       }
     }
-    &.menu-item-has-children>a:after{
+  }
+  .menu>li.menu-item>a{
+    font-size: 1.4em;
+    font-family: 'museo300';
+    &:before{
       .fontawesome;
-      content: '\f0d7';
-      color: @orange;
+      content: '\f0da';
+      color: @green;
       display: inline-block;
-      margin-left: 1rem;
+      margin-right: 1rem;
     }
   }
   li.separator {
-    color: @blue;
+    color: @green;
   }
   li:hover, li.current-menu-item, li.current-menu-ancestor{
     a, a:hover{
-      color: @white;
       text-decoration: none;
-      }
-  }
-  li.current-menu-item, li.current-menu-ancestor{
-    a, a:hover{
-      border-bottom: 6px solid @orange;
       }
   }
   li.last-child{
@@ -189,19 +183,21 @@ Site Navigation
 --------------------------------------------- */
 
 .nav-secondary {
-  padding: 0.5rem 0;
-  .wrap{
+  padding: 0;
+  width: 60%;
+  float: left;
+  text-align: right;
     li.menu-item{
       width:auto;
       position: relative;
       >a{
         .custombody(1.4);
-        padding: 0.5rem 1rem;
+        padding: 0 1rem;
         color: @ltgrey;
-        text-transform: uppercase;
+        text-transform: lowercase;
       }
       >a:hover{
-        color:@blue;
+        color:@green;
       }
       ul{
         display: none;
@@ -226,13 +222,15 @@ Site Navigation
     }
     li.menu-item.last-child{
       border: 0;
+      a{
+        padding-right: 2.2rem;
+      }
     }
     li:hover{
       ul{
         display: block;
       }
     }
-  }
 }
 
 /* Footer Navigation
