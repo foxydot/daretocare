@@ -8535,7 +8535,7 @@ Site Footer
 /* Responsive Design Custom Styles
 ------------------------------------------------------------ */
 /* Smaller screens */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 801px) {
   /* Enter Your Custom Styles Here */
   div.wrap {
     padding: 0 15px;
@@ -8553,10 +8553,30 @@ Site Footer
     width: 100%;
     margin: 1rem auto;
     float: none;
+    background-position: center center;
   }
   .header-image .site-header .nav-primary {
     margin: 0 auto;
     float: none;
+  }
+  .header-image .site-header .widget-area {
+    float: none;
+    display: block;
+    position: relative;
+  }
+  .header-image .site-header .widget-area .widget {
+    display: block;
+  }
+  .header-image .site-header .widget-area .connected-text {
+    text-align: center;
+    float: none;
+  }
+  .header-image .site-header .widget-area .connected-text .food-btn {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+  .header-image .site-header .widget-area .connected-social {
+    display: none;
   }
   .nav-primary {
     float: none;
@@ -8574,15 +8594,18 @@ Site Footer
     display: inline-block;
     width: 100%;
     text-indent: 20px;
-    background: #0F6BAE;
+    background: #b4da83;
     min-height: 46px;
     padding-top: 14px;
     position: relative;
+    text-decoration: none;
+  }
+  .nav-responsive a#pull:hover {
+    text-decoration: none;
   }
   .nav-responsive a#pull > strong {
     color: #fff;
     text-decoration: none;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.78);
     font-size: 1.2rem;
   }
   .nav-responsive a#pull ul#mobile_menu {
@@ -8595,7 +8618,7 @@ Site Footer
     padding: 0;
   }
   .nav-responsive a#pull ul#mobile_menu li a {
-    background: #0F6BAE;
+    background: #b4da83;
     color: #FFF;
     display: block;
     width: 100%;
@@ -8607,7 +8630,7 @@ Site Footer
     right: 15px;
   }
   .nav-responsive a#pull ul#mobile_menu li a:hover {
-    background: #1388dd;
+    background: #cbe5aa;
   }
   .nav-responsive a#pull ul#mobile_menu li .toggle-switch {
     margin-right: 12px;
@@ -8637,7 +8660,7 @@ Site Footer
     display: none;
   }
   .nav-responsive a#pull ul#mobile_menu li.current-menu-item a {
-    background: #1e95ec;
+    background: #b4da83;
   }
   .nav-responsive a#pull:hover {
     text-decoration: none;
@@ -8647,7 +8670,7 @@ Site Footer
     font-family: 'FontAwesome';
     font-size: 2.2rem;
     text-indent: 0;
-    color: #0F6BAE;
+    color: #b4da83;
     text-align: center;
     width: 30px;
     height: 30px;
@@ -8665,10 +8688,34 @@ Site Footer
   }
 }
 /* Mobile */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 801px) {
   /* Enter Your Custom Styles Here */
   .mobile-only {
     display: block;
+  }
+  .footer-widgets {
+    text-align: center;
+  }
+  .footer-widgets .widget {
+    display: block;
+    float: none;
+  }
+  .footer-widgets .widget.logo {
+    border: 0;
+  }
+  .footer-widgets .widget.widget_sp_image {
+    margin: 1.6rem 0;
+  }
+  .footer-widgets .widget.msd-connected.last-child {
+    max-width: 100%;
+  }
+  .footer-widgets .widget.msd-connected.last-child .connected-social .social-media {
+    float: none;
+  }
+  .footer-widgets .widget.msd-connected.last-child .connected-social .social-media a,
+  .footer-widgets .widget.msd-connected.last-child .connected-social .social-media a:hover {
+    float: none;
+    display: inline-block;
   }
 }
 @media only screen and (max-width: 479px) {

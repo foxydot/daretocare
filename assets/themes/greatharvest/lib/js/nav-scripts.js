@@ -3,8 +3,8 @@ jQuery(document).ready(function(){
 /*RESPONSIVE NAVIGATION, COMBINES MENUS EXCEPT FOR FOOTER MENU*/
 
     //jQuery('.menu').not('#footer .menu, #footer-widgets .menu').wrap('<div id="nav-response" class="nav-responsive">');
-    jQuery('#menu-primary-links').wrap('<div id="nav-response" class="nav-responsive">');
-    jQuery('#nav-response').append('<a href="#" id="pull" class="closed"><strong>MENU</strong></a>');   
+    jQuery('#menu-primary-links,#menu-secondary-links').wrap('<div id="nav-response" class="nav-responsive">');
+    jQuery('.site-header>.wrap').append('<div class="nav-responsive"><a href="#" id="pull" class="closed"><strong>MENU</strong></a></div>');   
     
     //move the search box
     if(jQuery('#pull').css('display') !== 'none'){

@@ -20,7 +20,7 @@
 
 /* Smaller screens */
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 801px) {
   /* Enter Your Custom Styles Here */ 
   div.wrap {
     padding: 0 15px;
@@ -38,12 +38,32 @@
             width: 100%;
             margin: 1rem auto;
             float: none;
+            background-position: center center;
           }
         }
       }
       .nav-primary{
         margin: 0 auto;
         float: none;
+      }
+      .widget-area{
+        float: none;
+        display: block;
+        position: relative;
+        .widget{
+          display: block;
+        }
+        .connected-text{
+          text-align: center;
+          float: none;
+          .food-btn{
+            max-width: 100%; 
+            margin-bottom: 0;
+          }
+        }
+        .connected-social{
+          display: none;
+        }
       }
      }
   } .nav-primary  {
@@ -62,14 +82,17 @@
       width: 100%;
       position: relative;
       text-indent: 20px;
-      background: @blue;
+      background: lighten(@green,15%);
       min-height: 46px;
       padding-top: 14px;
       position: relative;
+      text-decoration: none;
+      &:hover{
+        text-decoration: none;
+      }
       > strong {
         color: #fff;
         text-decoration: none;
-        text-shadow:1px 1px 1px rgba(0, 0, 0, 0.78);
         font-size: 1.2rem;
       }
       ul#mobile_menu {
@@ -80,7 +103,7 @@
           list-style: none;
           padding: 0;
           a{
-            background: @blue;
+            background: lighten(@green,15%);
             color: @white;
             display: block;
             width: 100%;
@@ -94,7 +117,7 @@
             }
           }
           a:hover{
-            background: lighten(@blue,10%);
+            background: lighten(lighten(@green,15%),10%);
           }
           .toggle-switch{
             margin-right: 12px;
@@ -132,7 +155,7 @@
         }
         li.current-menu-item{
           a{
-          background: lighten(@blue, 15%);
+          background: lighten(@green, 15%);
           }
         }
       }
@@ -146,7 +169,7 @@
     font-family: 'FontAwesome';
     font-size: 2.2rem;
     text-indent: 0;
-    color: @blue;
+    color: lighten(@green,15%);
     text-align: center;
     width: 30px;
     height: 30px;
@@ -161,11 +184,33 @@
 
 /* Mobile */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 801px) {
   /* Enter Your Custom Styles Here */ 
   
   .mobile-only {display: block;}
- 
+  .footer-widgets{
+    text-align: center;
+    .widget{
+      display: block;
+      float: none;
+      &.logo{
+        border: 0;
+      }
+      &.widget_sp_image{
+        margin: 1.6rem 0;
+      }
+      &.msd-connected.last-child{
+        max-width: 100%;
+        .connected-social .social-media{
+          float: none;
+          a,a:hover{
+            float: none;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
 }
 
 
