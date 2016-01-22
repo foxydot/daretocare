@@ -134,3 +134,32 @@
     }
   }
 }
+
+.site-inner{
+  main.content{
+    article.page{
+      .entry-content{
+        p.first-child{
+          .customheader(2.4);
+          font-weight: 200;
+          color: @medgrey;
+        }
+        h2{
+          .customheader(3.2);
+          font-weight: 200;
+          border-top: 1px solid @medgrey;
+          border-bottom: 1px solid @medgrey;
+        }
+        h3{
+          .customheader(1.8);
+        }
+        h4{
+          .customheader(1.6);
+        }
+        strong, h3, h4 {
+          color: @red;
+        }
+      }
+    }
+  }
+}
