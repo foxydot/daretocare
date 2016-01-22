@@ -7739,7 +7739,6 @@ article.entry {
   font-size: 3.2rem;
   line-height: 1.625;
   font-weight: 200;
-  border-top: 1px solid #7F7F7F;
   border-bottom: 1px solid #7F7F7F;
 }
 /* Pagination
@@ -8555,8 +8554,18 @@ Site Footer
 }
 .site-inner main.content article.page .entry-content strong,
 .site-inner main.content article.page .entry-content h3,
-.site-inner main.content article.page .entry-content h4 {
-  color: #f00;
+.site-inner main.content article.page .entry-content h4,
+.site-inner main.content article.page .entry-content a,
+.site-inner main.content article.page .entry-content a:visited {
+  color: #A12616;
+}
+.site-inner main.content article.page .entry-content a:hover {
+  color: #47110a;
+}
+.page.programs .site-inner {
+  background-image: url(../img/bkg-programs.png);
+  background-repeat: no-repeat;
+  background-position: 0 2rem;
 }
 .nav-responsive ul,
 .nav-responsive li,
