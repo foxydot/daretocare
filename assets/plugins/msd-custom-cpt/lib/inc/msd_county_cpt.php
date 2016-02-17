@@ -86,7 +86,7 @@ if (!class_exists('MSDCountyCPT')) {
         function add_scripts() {
             global $post;
             if(is_cpt($this->cpt)){
-                wp_register_script('chartjs', plugin_dir_url(dirname(__FILE__)).'js/chart.min.js', array('jquery'),0,0);
+                wp_register_script('chartjs', plugin_dir_url(dirname(__FILE__)).'js/Chart.min.js', array('jquery'),0,0);
                 wp_enqueue_script('chartjs');
             }
         }
