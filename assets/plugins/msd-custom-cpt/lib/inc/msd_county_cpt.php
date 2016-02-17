@@ -86,7 +86,7 @@ if (!class_exists('MSDCountyCPT')) {
         function add_scripts() {
             global $post;
             if(is_cpt($this->cpt)){
-                wp_register_script('chartjs', plugin_dir_url(dirname(__FILE__)).'/js/chart.min.js', array('jquery'),0,0);
+                wp_register_script('chartjs', plugin_dir_url(dirname(__FILE__)).'js/chart.min.js', array('jquery'),0,0);
                 wp_enqueue_script('chartjs');
             }
         }
@@ -96,7 +96,7 @@ if (!class_exists('MSDCountyCPT')) {
             if($current_screen->post_type == $this->cpt){
                 wp_enqueue_script('media-upload');
                 wp_enqueue_script('thickbox');
-                wp_register_script('my-upload', plugin_dir_url(dirname(__FILE__)).'/js/msd-upload-file.js', array('jquery','media-upload','thickbox'),FALSE,TRUE);
+                wp_register_script('my-upload', plugin_dir_url(dirname(__FILE__)).'js/msd-upload-file.js', array('jquery','media-upload','thickbox'),FALSE,TRUE);
                 wp_enqueue_script('my-upload');
             }
         }
@@ -105,7 +105,7 @@ if (!class_exists('MSDCountyCPT')) {
             global $current_screen;
             if($current_screen->post_type == $this->cpt){
                 wp_enqueue_style('thickbox');
-                wp_enqueue_style('custom_meta_css',plugin_dir_url(dirname(__FILE__)).'/css/meta.css');
+                wp_enqueue_style('custom_meta_css',plugin_dir_url(dirname(__FILE__)).'css/meta.css');
             }
         }   
             

@@ -131,7 +131,7 @@ $states = array('AL'=>"Alabama",
     </li>
     <?php $mb->the_field('pop_general'); ?>
     <li class="gfield" id="field_<?php $mb->the_name(); ?>"><label for="<?php $mb->the_name(); ?>"
-        class="gfield_label">Total Population/label>
+        class="gfield_label">Total Population</label>
     <div class="ginput_container">
             <div class="ginput_container"><input type="text" tabindex="5" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>"></div>
         </div>
