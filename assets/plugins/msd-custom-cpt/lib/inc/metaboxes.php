@@ -1,5 +1,5 @@
 <?php 
-global $location_info,$client_info,$additional_files;
+global $location_info,$client_info,$county_data,$additional_files;
 
 $client_info = new WPAlchemy_MetaBox(array
         (
@@ -14,17 +14,29 @@ $client_info = new WPAlchemy_MetaBox(array
             'prefix' => '_client_' // defaults to NULL
         ));
 $location_info = new WPAlchemy_MetaBox(array
-		(
-			'id' => '_location_information',
-			'title' => 'Location Information',
-			'types' => array('location','project'),
-			'context' => 'normal',
-			'priority' => 'high',
-			'template' => WP_PLUGIN_DIR.'/'.plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php').'lib/template/location-information.php',
-			'autosave' => TRUE,
-			'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
-			'prefix' => '_location_' // defaults to NULL
-		));
+        (
+            'id' => '_location_information',
+            'title' => 'Location Information',
+            'types' => array('location','project'),
+            'context' => 'normal',
+            'priority' => 'high',
+            'template' => WP_PLUGIN_DIR.'/'.plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php').'lib/template/location-information.php',
+            'autosave' => TRUE,
+            'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
+            'prefix' => '_location_' // defaults to NULL
+        ));
+$county_data = new WPAlchemy_MetaBox(array
+        (
+            'id' => '_county_data',
+            'title' => 'County Data',
+            'types' => array('county'),
+            'context' => 'normal',
+            'priority' => 'high',
+            'template' => WP_PLUGIN_DIR.'/'.plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php').'lib/template/county-data.php',
+            'autosave' => TRUE,
+            'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
+            'prefix' => '_county_' // defaults to NULL
+        ));
 $additional_files = new WPAlchemy_MetaBox(array
         (
             'id' => '_additional_files',

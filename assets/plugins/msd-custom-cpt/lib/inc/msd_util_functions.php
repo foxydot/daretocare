@@ -26,6 +26,18 @@ if ( ! function_exists( 'msd_trim_headline' ) ) :
 		//return $text;
 	}
 endif;
+
+
+if(!function_exists('get_attachment_id_from_src')){
+function get_attachment_id_from_src ($image_src) {
+
+        global $wpdb;
+        $query = "SELECT ID FROM {$wpdb->posts} WHERE guid='$image_src'";
+        $id = $wpdb->get_var($query);
+        return $id;
+
+    }
+}
 /**
  * @desc Checks to see if the given plugin is active.
  * @return boolean

@@ -104,13 +104,8 @@ if (!class_exists('MSDCustomCPT')) {
         	//get sub-packages
         	requireDir(plugin_dir_path(__FILE__).'/lib/inc');
             //here are some examples to get started with
-            if(class_exists('MSDLocationCPT')){
-                $this->location_class = new MSDLocationCPT();
-                register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
-                register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
-            }
-            if(class_exists('MSDProjectCPT')){
-                $this->project_class = new MSDProjectCPT();
+            if(class_exists('MSDCountyCPT')){
+                $this->project_class = new MSDCountyCPT();
                 register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
                 register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
             }
