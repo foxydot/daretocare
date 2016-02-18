@@ -39,7 +39,7 @@ if (!class_exists('MSDCountyCPT')) {
         function register_cpt_county() {
         
             $labels = array( 
-                'name' => _x( 'Countys', 'county' ),
+                'name' => _x( 'Counties', 'county' ),
                 'singular_name' => _x( 'County', 'county' ),
                 'add_new' => _x( 'Add New', 'county' ),
                 'add_new_item' => _x( 'Add New County', 'county' ),

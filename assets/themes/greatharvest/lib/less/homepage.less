@@ -4,29 +4,58 @@
 #hp-top{
 }
 .site-inner{
-  div{
-    text-align: center;
-  }
-  .button, .button:hover{
-    width: auto;
-  }
+  display: none;
 }
 .sectioned-page-wrapper{
   .section{
-    text-align: center;
+    h1,h2,h3,h4,h5,h6{
+      color: @mdgrey;
+      font-weight: 300;
+      margin: 0.5em 0;
+    }
   }
-  
- .section-products{
-   .row{
-     margin: 3rem 0;
-   }
- }
- .section-morbidity{
-   .section-title{
-     padding-bottom: 2rem;
-   }
-   .section-body{
-     display: none;
-   }
- }
+  .section-stay-in-touch{
+    div.gform_wrapper{
+      .gform_heading{
+        margin: 0;
+        h3.gform_title{
+          font-weight: 300;
+          text-align: center;
+        }
+        span.gform_description{
+          width: 40%;
+          float: left;
+          color: @mdgrey;
+          font-size: 1.4rem;
+        }
+      }
+      .gform_body{
+        width: 59%;
+        float: right;
+        li, form li{
+          margin: 0;
+          padding: 0;
+          label{
+            display: none;
+          }
+        }
+      }
+      .gform_footer{
+        width: 30%;
+        float: right;    
+        margin: -32px 0 0;
+        padding: 0 1%;
+        input[type="submit"]{
+          background-color: @red;
+          border-radius: 0;
+          margin: 0;
+          padding: 3px 24px;
+          width: 100%;
+          &:hover{
+            background-color: lighten(@red,10%);
+          }
+        }
+      }
+    }
+  }
 }
