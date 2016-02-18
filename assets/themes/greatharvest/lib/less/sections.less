@@ -1,8 +1,5 @@
 .page-template-page-sectioned{
   .site-container{
-    background: @offwhite;
-    background-repeat: no-repeat;
-    background-position: center top;
     .site-inner{
       background: transparent;
       padding: 0;
@@ -23,17 +20,14 @@
   }
 }
 .sectioned-page-wrapper{
-  box-shadow: 0 0 12px 0 fade(@dkgrey,100%);
-  position: relative;
-  z-index: 10;
   .section{
     background-repeat: no-repeat;
     padding: 0;
     position: relative;
     .section-subtitle,h4{
       .customheader(1.8);
-      font-weight: 500;
-      color: @blue;
+      font-weight: 300;
+      color: @medgrey;
       line-height: 1.25;
       margin: 0;
     }
@@ -42,18 +36,18 @@
     }
       h3{
       .customheader(1.8);
-      font-weight: 700;
+      font-weight: 300;
       color: @medgrey;
       line-height: 1.25;
       margin-bottom: 0.5em;
       }
     .section-title h3{
       .customheader(2.4);
+      font-weight: 300;
       text-align: center;
-      text-transform: uppercase;
-      color: @dkgrey;
+      color: @medgrey;
       padding-top: 2rem;
-      margin-bottom: 0;
+      margin: 0 auto;
     }
     .section-body{
       .wrap{
@@ -110,74 +104,6 @@
   .section.title-bar.arrow-down{
     .section-body{
       padding-top: 3rem;
-    }
-  }
-  .section.summary{
-    .section-body{
-      margin: 4rem auto;
-      .bkg-white{
-        background:@white;
-        padding: 4rem;
-        .section-title{
-          h3{
-            text-align: left;
-            text-transform: none;
-            font-size: 2.4rem;
-          }
-        }
-        .section-subtitle{
-          font-size: 1.8rem;
-        }
-        .section-title, .section-subtitle, .content{
-          margin-left: 310px;
-        }
-        .content{
-          float: none;
-          width: auto;
-          max-height: 0;
-          overflow: hidden;
-          .transition(all 0.5s ease-in-out);
-        }
-        .content.open{
-          max-height: 600px;
-          height: auto;
-        }
-        &:after{
-          .msd-clearfix;
-        }
-      }
-      .more-wrap{
-        text-align: right;
-        padding: 0;
-        .expand{
-          display: inline-block;
-          font-size: 0.8em;
-          cursor: pointer;
-          i{
-            display: inline-block;
-            background: @blue;
-            color: @white;
-            text-align: center;
-            height: 20px;
-            width: 20px;
-            line-height: 1;
-            position: relative;
-            top: -4px;
-            font-size: 1.2em;
-          }
-        }
-      }
-    }
-  }
-  //specific sections
-  .section-flow{
-    .section-body{
-      font-size: 1.8rem;
-      .wrap{
-        .col-md-6.first-child{
-          padding-top: 3em;
-        }
-      }
     }
   }
 }

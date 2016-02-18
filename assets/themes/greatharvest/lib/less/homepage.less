@@ -8,10 +8,49 @@
 }
 .sectioned-page-wrapper{
   .section{
+    color: @medgrey;
+    font-weight: 300;
+    a, a:link, a:visited{
+      color: @green;
+    }
     h1,h2,h3,h4,h5,h6{
-      color: @mdgrey;
+      color: @medgrey;
       font-weight: 300;
       margin: 0.5em 0;
+    }
+  }
+  .section-dare-to-care-101{
+    blockquote{
+      border-top: 2px @green solid;
+      border-bottom: 2px @green solid;
+      padding: .5em;
+      margin: 0;
+      p{
+        font-size: 1.6em;
+        margin: 0 0 0.5em 0;
+        line-height: 1;
+        strong{
+          font-size: 2.6em;
+          color: @green;
+          font-weight: 400;
+        }
+        .left{
+          float: left;
+          margin-right: 2.5rem;
+        }
+        em{
+          font-style: normal;
+          color: @medgrey;
+          font-weight: 400;
+        }
+      }
+      &:before{
+        content: '';
+      }
+    }
+    .section-content>p.last-child{
+      font-size: 1.6em;
+      margin: 1em 0;
     }
   }
   .section-stay-in-touch{
