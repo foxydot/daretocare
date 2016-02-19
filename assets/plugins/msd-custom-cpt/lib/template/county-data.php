@@ -1,5 +1,23 @@
 <?php 
 global $wpalchemy_media_access; 
+$fields = array(
+        'state'=>'State',
+        'data_year'=>'Data Year',
+        'families_served'=>'Families Served',
+        'people_served'=>'People Served',
+        'meals'=>'Meals Provided',
+        'pounds_food'=>'Pounds of Food',
+        'pounds_produce'=>'Pounds of Fresh Produce',
+        'percent_insecurity'=>'Percent of Food Insecurity',
+        'insecure_individuals'=>'Number of Food Insecure Individuals',
+        'pop_general'=>'Total Population',
+        'percent_child_insecurity'=>'Percent of Child Food Insecurity',
+        'insecure_children'=>'Number of Food Insecure Children',
+        'pop_children'=>'Total Population of Children',
+        'bio_name'=>'Bio Name',
+        'bio_image'=>'Bio Image',
+        'bio'=>'Bio Story'
+    );
 $states = array('AL'=>"Alabama",
         'AK'=>"Alaska",
         'AZ'=>"Arizona",
@@ -54,13 +72,6 @@ $states = array('AL'=>"Alabama",
 ?>
 
 <ul class="location_meta_control">
-	    <?php $mb->the_field('short_title'); ?>
-    <li class="gfield" id="field_<?php $mb->the_name(); ?>"><label for="<?php $mb->the_name(); ?>"
-        class="gfield_label">Nav Title</label>
-    <div class="ginput_container">
-            <div class="ginput_container"><input type="text" tabindex="5" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>"></div>
-        </div>
-    </li>
     <li>
     <?php $metabox->the_field('state'); ?>
     <label id="<?php $metabox->the_name(); ?>_label" for="<?php $metabox->the_name(); ?>">State</label>

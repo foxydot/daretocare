@@ -19,6 +19,160 @@
       margin: 0.5em 0;
     }
   }
+  .section-homepage-hero-slider{
+    background-color: @green;
+  }
+  .section-news-events-facebook{
+    padding: 2em 0;
+    .section-body{
+      .section-content.column-1{
+        p{
+          margin: 0 auto;
+          a.block{
+            display: inline-block;
+            color: @white;
+            background-color: @mdgrey;
+            margin: 0.3em;
+            text-align: center;
+            line-height: 1.2;
+            &.news,&.event{
+              padding: 4em;
+              height: 13.5em;
+              width: 13.5em;
+            }
+            &.attend,&.latest{
+              padding: 1.5em;
+              height: 9em;
+              width: 9em;
+            }
+            &.latest{
+              padding-left: 2em;
+              padding-right: 2em;
+              width: 18em;
+            }
+            strong{
+              display: block;
+              font-size: 2.4em;
+              font-weight: 300;
+            }
+            i{
+              display: block;
+              font-size: 2em;
+              border: 2px solid @white;
+              border-radius: 50%;
+              width: 1.2em;
+              height: 1.2em;
+              text-align: center;
+              margin: 0.4em auto;
+            }
+            &:hover{
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .section-county-info{
+    background-color: @green;
+    .section-body .wrap{
+      padding: 0;
+    }
+    #counties{
+      ol.carousel-indicators{    
+        bottom: auto;
+        left: auto;
+        margin: 0 auto;
+        padding: 0;
+        position: static;
+        width: 100%;
+        li{
+          border: 0px solid #fff;
+          border-radius: 0;
+          display: inline-block;
+          height: auto;
+          margin: 0.16em 0;
+          padding: 0.6em 0.2em 1em;
+          text-indent: 0;
+          width: auto;
+          span.county{
+            display: inline-block;
+            &:after{
+              display: block;
+              content: '\f0d7';
+              color: @green;
+              .fontawesome;
+              line-height: 0;
+            }
+          }
+        span.state{
+          color: @white;
+          display: inline-block;
+          margin-right: 0.16em;
+            &:after{
+              display: block;
+              content: '\f0d7';
+              color: @green;
+              .fontawesome;
+              line-height: 0;
+            }
+        }
+        span.indiana{
+          border-left: 1px solid @medgrey;
+          padding-left: 0.6rem;
+        }
+          &.active{
+            background-color: transparent;
+            height: auto;
+            margin: 2px;
+            width: auto;
+            color: @white;
+            .county:after{
+              color: @white;
+            }
+            span.state{
+              color: @white;
+            }
+          }
+        }
+      }
+      .carousel-inner{
+        .item{
+          text-align: center;
+          min-height: 24em;
+          .titles{
+            margin: 1em 0;
+            h3{
+              margin: 0;
+              font-size: 1.4em;
+            }
+            h2{
+              margin: 0;
+              font-size: 2.6em;
+              color: @white;
+            }
+          }
+          .people, .bio, .veggies{
+            color: @white;
+            .icon{
+              min-height: 9.8em;
+              min-width: 9.8em;
+            }
+            strong{
+              display: block;
+              font-size: 2em;
+              line-height: 1.2;
+              font-weight: 500;
+              margin-top: 0.5em;
+            }
+            img{
+              border: 1px solid @white;
+            }
+          }
+        }
+      }
+    }
+  }
   .section-dare-to-care-101{
     blockquote{
       border-top: 2px @green solid;
@@ -96,5 +250,29 @@
         }
       }
     }
+  }
+}
+
+//Responsiveness
+@media only screen and (max-width: 939px) {
+  .sectioned-page-wrapper{
+    font-size: 1.7vw;
+    
+    background-color: @green;
+    .section-body .wrap{
+      padding: 0;
+    }
+    #counties{
+      .carousel-inner{
+        .item{
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .sectioned-page-wrapper{
+    font-size: 3vw;
   }
 }

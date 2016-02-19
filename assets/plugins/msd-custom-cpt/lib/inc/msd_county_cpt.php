@@ -32,6 +32,7 @@ if (!class_exists('MSDCountyCPT')) {
             add_filter( 'enter_title_here', array(&$this,'change_default_title') );
             
             add_shortcode('county_data', array(&$this, 'county_data_shortcode_handler'));
+            add_shortcode('county-slider', array(&$this, 'county_slider_shortcode_handler'));
             
             add_action('genesis_after_entry', array(&$this,'county_data_bio_display'));
         }
@@ -291,5 +292,111 @@ if (!class_exists('MSDCountyCPT')) {
                 print $ret;
             }
         }
+        
+        function county_slider_shortcode_handler(){
+            $counties = $this->get_all_counties();
+            //the header
+            $old_state = $hdr = '';
+            $i=0;
+            foreach($counties AS $county){
+                $state = $county->state;
+                $active = $i==0?' active':'';
+                $state_str = $state != $old_state?'<span class="state '.strtolower($state).'">'.$state.': </span>':'';
+                $title_short = preg_replace('/\sCounty/i','',$county->post_title);
+                $hdr .= '<li class="item-nav'.$active.'" data-target="#counties" data-slide-to="'.$i.'">'.$state_str.'<span class="county">'.$title_short.'</span></li>';
+                $old_state = $state; $i++;
+            }
+            $hdr = '<ol class="carousel-indicators">'.$hdr.'</ol>';
+            
+            //the body
+            $body = '';
+            $i=0;
+            foreach($counties AS $county){
+                $active = $i==0?' active':'';
+                $image_id = get_attachment_id_from_src($county->bio_image);
+                $image = wp_get_attachment_image( $image_id, 'thumbnail' );
+                $body .= '
+                <div class="item'.$active.'">
+                    <div class="titles">
+                        <h3>Our Mission: Helping Those in Needs</h3>
+                        <h2>Hunger in '.$county->post_title.'</h2>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 people">
+                        <div class="icon icon-people"></div>
+                        <strong>'.$county->insecure_individuals.'</strong>
+                        people who lack the food to live a healthy life
+                      </div>
+                      <div class="col-sm-4 bio">
+                        '.$image.'
+                        <strong>Meet</strong>
+                        '.$county->bio_name.'
+                      </div>
+                      <div class="col-sm-4 veggies">
+                        <div class="icon icon-veggies"></div>
+                        <strong>'.$county->pounds_food.'</strong>
+                        pounds of free food distributed to those in need in '.$county->data_year.'
+                      </div>
+                    </div>
+                </div>';
+                $i++;
+            }
+            
+            $ret = '<div id="counties" class="carousel slide" data-interval="0" data-ride="carousel">
+            '.$hdr.'
+              <div class="carousel-inner" role="listbox">
+              '.$body.'
+              </div>
+            </div>
+            <script>
+                jQuery(document).ready(function($) {
+                    $(".counties").carousel({
+                      interval: 0
+                    })
+                });
+            </script>';
+            return $ret;
+        }
+        
+        function get_all_counties(){
+            $args = array(
+            'posts_per_page'   => -1,
+            'orderby'          => 'title',
+            'order'            => 'ASC',
+            'post_type'        => $this->cpt,
+            );
+            $fields = array(
+                'state'=>'State',
+                'data_year'=>'Data Year',
+                'families_served'=>'Families Served',
+                'people_served'=>'People Served',
+                'meals'=>'Meals Provided',
+                'pounds_food'=>'Pounds of Food',
+                'pounds_produce'=>'Pounds of Fresh Produce',
+                'percent_insecurity'=>'Percent of Food Insecurity',
+                'insecure_individuals'=>'Number of Food Insecure Individuals',
+                'pop_general'=>'Total Population',
+                'percent_child_insecurity'=>'Percent of Child Food Insecurity',
+                'insecure_children'=>'Number of Food Insecure Children',
+                'pop_children'=>'Total Population of Children',
+                'bio_name'=>'Bio Name',
+                'bio_image'=>'Bio Image',
+                'bio'=>'Bio Story'
+            );
+            $posts = get_posts($args);
+            $i = 0;
+            foreach($posts AS $post){
+                foreach($fields AS $k => $v){
+                    $posts[$i]->$k = get_post_meta($post->ID,'_county_'.$k,TRUE);
+                }
+                $i++;
+            }
+            usort($posts,array(&$this,'sort_by_state'));
+            return $posts;
+        }  
+        
+        function sort_by_state( $a, $b ) {
+            return $a->state == $b->state ? 0 : ( $a->state > $b->state ) ? -1 : 1;
+        } 
   } //End Class
 } //End if class exists statement

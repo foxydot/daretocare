@@ -298,6 +298,162 @@
   font-weight: 300;
   margin: 0.5em 0;
 }
+.sectioned-page-wrapper .section-homepage-hero-slider {
+  background-color: #90C848;
+}
+.sectioned-page-wrapper .section-news-events-facebook {
+  padding: 2em 0;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p {
+  margin: 0 auto;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block {
+  display: inline-block;
+  color: #FFF;
+  background-color: #7F7F7F;
+  margin: 0.3em;
+  text-align: center;
+  line-height: 1.2;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.news,
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event {
+  padding: 4em;
+  height: 13.5em;
+  width: 13.5em;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.attend,
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.latest {
+  padding: 1.5em;
+  height: 9em;
+  width: 9em;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.latest {
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 18em;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block strong {
+  display: block;
+  font-size: 2.4em;
+  font-weight: 300;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block i {
+  display: block;
+  font-size: 2em;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+  margin: 0.4em auto;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:hover {
+  text-decoration: none;
+}
+.sectioned-page-wrapper .section-county-info {
+  background-color: #90C848;
+}
+.sectioned-page-wrapper .section-county-info .section-body .wrap {
+  padding: 0;
+}
+.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators {
+  bottom: auto;
+  left: auto;
+  margin: 0 auto;
+  padding: 0;
+  position: static;
+  width: 100%;
+}
+.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li {
+  border: 0px solid #fff;
+  border-radius: 0;
+  display: inline-block;
+  height: auto;
+  margin: 0.16em 0;
+  padding: 0.6em 0.2em 1em;
+  text-indent: 0;
+  width: auto;
+}
+.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.county {
+  display: inline-block;
+}
+.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.county:after {
+  display: block;
+  content: '\f0d7';
+  color: #90C848;
+  font-family: "FontAwesome";
+  line-height: 0;
+}
+.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.state {
+  color: #FFF;
+  display: inline-block;
+  margin-right: 0.16em;
+}
+.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.state:after {
+  display: block;
+  content: '\f0d7';
+  color: #90C848;
+  font-family: "FontAwesome";
+  line-height: 0;
+}
+.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.indiana {
+  border-left: 1px solid #7F7F7F;
+  padding-left: 0.6rem;
+}
+.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li.active {
+  background-color: transparent;
+  height: auto;
+  margin: 2px;
+  width: auto;
+  color: #FFF;
+}
+.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li.active .county:after {
+  color: #FFF;
+}
+.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li.active span.state {
+  color: #FFF;
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item {
+  text-align: center;
+  min-height: 24em;
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles {
+  margin: 1em 0;
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles h3 {
+  margin: 0;
+  font-size: 1.4em;
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles h2 {
+  margin: 0;
+  font-size: 2.6em;
+  color: #FFF;
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies {
+  color: #FFF;
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon {
+  min-height: 9.8em;
+  min-width: 9.8em;
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people strong,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio strong,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies strong {
+  display: block;
+  font-size: 2em;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-top: 0.5em;
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people img,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio img,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies img {
+  border: 1px solid #FFF;
+}
 .sectioned-page-wrapper .section-dare-to-care-101 blockquote {
   border-top: 2px #90C848 solid;
   border-bottom: 2px #90C848 solid;
@@ -371,4 +527,18 @@
 }
 .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer input[type="submit"]:hover {
   background-color: #ce311c;
+}
+@media only screen and (max-width: 939px) {
+  .sectioned-page-wrapper {
+    font-size: 1.7vw;
+    background-color: #90C848;
+  }
+  .sectioned-page-wrapper .section-body .wrap {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .sectioned-page-wrapper {
+    font-size: 3vw;
+  }
 }
