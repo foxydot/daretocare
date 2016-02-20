@@ -186,7 +186,7 @@ if (!class_exists('MSDCountyCPT')) {
             switch($key){
                 case 'insecurity_charts':
                     $ret = '<div class="pie-charts row">
-                        <div class="col-sm-6 col-xs-12 row">
+                        <div class="col-sm-6 col-xs-12">
                             <h4>Food Insecurity</h4>
                             <div class="col-xs-6 chart">
                                 <canvas id="insecurity-chart-area" width="120"/>
@@ -196,7 +196,7 @@ if (!class_exists('MSDCountyCPT')) {
                                 of '.$post->post_title.'\'s population or '.$county_data->get_the_value('insecure_individuals').' individuals
                             </div>
                         </div>
-                        <div class="col-sm-6 col-xs-12 row">
+                        <div class="col-sm-6 col-xs-12">
                             <h4>Child Food Insecurity</h4>
                             <div class="col-xs-6 chart">
                                 <canvas id="child-insecurity-chart-area" width="120"/>
@@ -246,21 +246,21 @@ if (!class_exists('MSDCountyCPT')) {
                     break;
                 case 'distribution_charts':
                     $ret = '<div class="distribution-charts row">
-                        <div class="col-sm-6 col-xs-12 row">
+                        <div class="col-sm-6 col-xs-12">
                             <div class="col-xs-6 chart">
                                 <i class="icon icon-plate"></i>
                             </div>
                             <div class="col-xs-6 data">
-                                <strong class="served">'.$county_data->get_the_value('meals').'%</strong>
+                                <strong class="served">'.$county_data->get_the_value('meals').'</strong>
                                 meals provided to hungry neighbors in '.$post->post_title.' in '.$county_data->get_the_value('data_year').'
                             </div>
                         </div>
-                        <div class="col-sm-6 col-xs-12 row">
+                        <div class="col-sm-6 col-xs-12">
                             <div class="col-xs-6 chart">
                                 <i class="icon icon-apple"></i>
                             </div>
                             <div class="col-xs-6 data">
-                                <strong class="served">'.$county_data->get_the_value('pounds_produce').'%</strong>
+                                <strong class="served">'.$county_data->get_the_value('pounds_produce').'</strong>
                                 pounds of free produce distributed in '.$post->post_title.' in '.$county_data->get_the_value('data_year').'
                             </div>
                         </div>
@@ -282,7 +282,7 @@ if (!class_exists('MSDCountyCPT')) {
                 $county_data->the_meta();
                 $image_id = get_attachment_id_from_src($county_data->get_the_value('bio_image'));
                 $image = wp_get_attachment_image( $image_id, 'biopic' );
-                $ret = '<div class="bio">
+                $ret = '<div id="bio" class="bio">
                 '.$image.'
                 <h3>'.$county_data->get_the_value('bio_name').'\'s Story</h3>
                 <div class="story">
@@ -328,9 +328,11 @@ if (!class_exists('MSDCountyCPT')) {
                         people who lack the food to live a healthy life
                       </div>
                       <div class="col-sm-4 bio">
+                        <a href="'.get_post_permalink($county->ID).'#bio">
                         '.$image.'
                         <strong>Meet</strong>
                         '.$county->bio_name.'
+                        </a>
                       </div>
                       <div class="col-sm-4 veggies">
                         <div class="icon icon-veggies"></div>

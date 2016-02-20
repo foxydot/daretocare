@@ -26,7 +26,7 @@ function msdlab_bootstrap_content_sidebar_wrap( $attributes ){
     switch($layout){
         case 'content-sidebar':
         case 'sidebar-content':
-            $attributes['class'] .= ' col-sm-12';
+            $attributes['class'] .= ' col-sm-12 row';
             break;
         case 'content-sidebar-sidebar':
         case 'sidebar-sidebar-content':

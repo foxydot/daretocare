@@ -298,6 +298,9 @@
   font-weight: 300;
   margin: 0.5em 0;
 }
+.sectioned-page-wrapper .section .section-title h3 {
+  font-size: 4rem;
+}
 .sectioned-page-wrapper .section-homepage-hero-slider {
   background-color: #90C848;
 }
@@ -308,12 +311,39 @@
   margin: 0 auto;
 }
 .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block {
+  position: relative;
   display: inline-block;
   color: #FFF;
-  background-color: #7F7F7F;
+  border: 1px solid #A02816;
   margin: 0.3em;
   text-align: center;
   line-height: 1.2;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:before,
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:before {
+  z-index: -2;
+  opacity: 1;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:after {
+  z-index: -1;
+  opacity: 0.6;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.news,
 .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event {
@@ -321,16 +351,36 @@
   height: 13.5em;
   width: 13.5em;
 }
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.news:before {
+  background-color: #A02816;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.news:after {
+  background-image: url(../img/news.jpg);
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event:before {
+  background-color: #90C848;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event:after {
+  background-image: url(../img/event.jpg);
+}
 .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.attend,
 .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.latest {
   padding: 1.5em;
   height: 9em;
   width: 9em;
 }
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.attend:before {
+  background-color: #F16528;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.attend:after {
+  background-image: url(../img/attendAnEvent.jpg);
+}
 .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.latest {
   padding-left: 2em;
   padding-right: 2em;
   width: 18em;
+  border-color: #90C848;
+  background-color: #90C848;
 }
 .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block strong {
   display: block;
@@ -347,8 +397,13 @@
   text-align: center;
   margin: 0.4em auto;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:hover {
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:hover,
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:active {
   text-decoration: none;
+}
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:hover:after,
+.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:active:after {
+  opacity: 1;
 }
 .sectioned-page-wrapper .section-county-info {
   background-color: #90C848;
@@ -363,6 +418,7 @@
   padding: 0;
   position: static;
   width: 100%;
+  border-bottom: 1px solid #FFF;
 }
 .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li {
   border: 0px solid #fff;
@@ -370,7 +426,7 @@
   display: inline-block;
   height: auto;
   margin: 0.16em 0;
-  padding: 0.6em 0.2em 1em;
+  padding: 0.6em 0.2em 0;
   text-indent: 0;
   width: auto;
 }
@@ -434,11 +490,53 @@
 .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies {
   color: #FFF;
 }
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:link,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:link,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:link,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:visited,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:visited,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:visited,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:active,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:active,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:active {
+  color: #FFF;
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:link:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:link:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:link:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:visited:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:visited:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:visited:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:active:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:active:hover,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:active:hover {
+  color: #F2F7FA;
+  text-decoration: none;
+}
 .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon,
 .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon,
 .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon {
   min-height: 9.8em;
   min-width: 9.8em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon-people,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon-people,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon-people {
+  background-image: url(../img/icon-people.png);
+}
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon-veggies,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon-veggies,
+.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon-veggies {
+  background-image: url(../img/icon-food.png);
 }
 .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people strong,
 .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio strong,
@@ -485,6 +583,9 @@
 .sectioned-page-wrapper .section-dare-to-care-101 .section-content > p.last-child {
   font-size: 1.6em;
   margin: 1em 0;
+}
+.sectioned-page-wrapper .section-how-to-help {
+  border-top: 6px solid #90C848;
 }
 .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading {
   margin: 0;
