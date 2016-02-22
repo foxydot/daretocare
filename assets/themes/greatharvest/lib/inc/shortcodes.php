@@ -129,26 +129,25 @@ function fb_code_function(){
 add_shortcode('how-to-help-nav','how_to_help_shortcode_handler');
 function how_to_help_shortcode_handler($atts){
     //the header
-    $i=0;
     $helps = array(
         'funds' => array(
             'nav' => 'Give Funds',
-            'ID' => '',
+            'ID' => '37',
             'img' => 'slide-funds.jpg',
         ),
         'food' => array(
             'nav' => 'Give Food',
-            'ID' => '',
+            'ID' => '8',
             'img' => 'slide-food.jpg',
         ),
         'volunteer' => array(
             'nav' => 'Volunteer',
-            'ID' => '',
+            'ID' => '34',
             'img' => 'slide-volunteer.jpg',
         ),
         'drives' => array(
             'nav' => 'Food Drives',
-            'ID' => '',
+            'ID' => '35',
             'img' => 'slide-drives.jpg',
         ),
         'virtual' => array(
@@ -157,63 +156,42 @@ function how_to_help_shortcode_handler($atts){
             'img' => 'slide-virtual.jpg',
         ),
     );
+    $i=0;
     foreach($helps AS $help){
-        $state = $county->state;
         $active = $i==0?' active':'';
-        $state_str = $state != $old_state?'<span class="state '.strtolower($state).'">'.$state.': </span>':'';
-        $title_short = preg_replace('/\sCounty/i','',$county->post_title);
-        $hdr .= '<li class="item-nav'.$active.'" data-target="#counties" data-slide-to="'.$i.'">'.$state_str.'<span class="county">'.$title_short.'</span></li>';
-        $old_state = $state; $i++;
+        $hdr .= '<li class="item-nav'.$active.'" slide="'.$i.'"><a href="'.get_permalink($help[ID]).'">'.$help['nav'].'</a></li>';
+        $i++;
     }
     $hdr = '<ol class="carousel-indicators">'.$hdr.'</ol>';
     
     //the body
     $body = '';
     $i=0;
-    foreach($counties AS $county){
+    foreach($helps AS $help){
         $active = $i==0?' active':'';
-        $image_id = get_attachment_id_from_src($county->bio_image);
-        $image = wp_get_attachment_image( $image_id, 'thumbnail' );
         $body .= '
         <div class="item'.$active.'">
-            <div class="titles">
-                <h3>Our Mission: Helping Those in Needs</h3>
-                <h2>Hunger in '.$county->post_title.'</h2>
-            </div>
-            <div class="row">
-              <div class="col-sm-4 people">
-                <div class="icon icon-people"></div>
-                <strong>'.$county->insecure_individuals.'</strong>
-                people who lack the food to live a healthy life
-              </div>
-              <div class="col-sm-4 bio">
-                <a href="'.get_post_permalink($county->ID).'#bio">
-                '.$image.'
-                <strong>Meet</strong>
-                '.$county->bio_name.'
-                </a>
-              </div>
-              <div class="col-sm-4 veggies">
-                <div class="icon icon-veggies"></div>
-                <strong>'.$county->pounds_food.'</strong>
-                pounds of free food distributed to those in need in '.$county->data_year.'
-              </div>
-            </div>
+            <a href="'.get_permalink($help[ID]).'"> 
+                <img src="'.get_stylesheet_directory_uri().'/lib/img/howToHelpSlides/'.$help['img'].'" />
+            </a>
         </div>';
         $i++;
     }
     
-    $ret = '<div id="counties" class="carousel slide" data-interval="0" data-ride="carousel">
-    '.$hdr.'
+    $ret = '<div id="help" class="carousel slide">
       <div class="carousel-inner" role="listbox">
       '.$body.'
       </div>
+    '.$hdr.'
     </div>
     <script>
         jQuery(document).ready(function($) {
-            $(".counties").carousel({
-              interval: 0
-            })
+            $("#help").carousel({
+              interval: 5000
+            });
+            $("#help .item-nav").mouseenter(function(){
+                $("#help").carousel(Number($(this).attr(\'slide\')));
+            });
         });
     </script>';
     return $ret;

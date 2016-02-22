@@ -587,6 +587,56 @@
 .sectioned-page-wrapper .section-how-to-help {
   border-top: 6px solid #90C848;
 }
+.sectioned-page-wrapper .section-how-to-help .section-body .wrap {
+  padding: 0;
+  max-width: 100%;
+  background-color: #90C848;
+}
+.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help .carousel-inner .item img {
+  margin: 0 auto;
+}
+.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators {
+  bottom: auto;
+  left: auto;
+  margin: 0 auto;
+  padding: 0;
+  position: static;
+  width: 100%;
+  border-bottom: 1px solid #FFF;
+}
+.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li {
+  border: 0px solid #fff;
+  border-radius: 0;
+  display: inline-block;
+  height: auto;
+  margin: 0.16em 0;
+  padding: 0.6em 2em;
+  text-indent: 0;
+  width: auto;
+}
+.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a,
+.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a:link,
+.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a:visited {
+  color: #FFF;
+}
+.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li:before {
+  display: block;
+  content: '\f0d8';
+  color: #90C848;
+  font-family: "FontAwesome";
+  line-height: 0;
+  padding-bottom: 0.6em;
+}
+.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li.active {
+  background-color: transparent;
+  height: auto;
+  margin: 2px;
+  width: auto;
+  color: #FFF;
+}
+.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li.active:before {
+  color: #FFF;
+}
 .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading {
   margin: 0;
 }

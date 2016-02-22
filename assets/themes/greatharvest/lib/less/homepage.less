@@ -286,6 +286,65 @@
   }
   .section-how-to-help{
     border-top: 6px solid @green;
+    .section-body{
+      .wrap{
+        padding: 0;
+        max-width: 100%;
+        background-color: @green;
+        #help{
+          .carousel-inner,.carousel-indicators{
+          }
+          .carousel-inner{
+            .item{
+              img{
+                margin: 0 auto;
+              }
+            }
+          }
+              
+          ol.carousel-indicators{    
+            bottom: auto;
+            left: auto;
+            margin: 0 auto;
+            padding: 0;
+            position: static;
+            width: 100%;
+            border-bottom: 1px solid @white;
+            li{
+              border: 0px solid #fff;
+              border-radius: 0;
+              display: inline-block;
+              height: auto;
+              margin: 0.16em 0;
+              padding: 0.6em 2em;
+              text-indent: 0;
+              width: auto;
+              a,a:link,a:visited{
+                color: @white;
+              }
+              &:before{
+                display: block;
+                content: '\f0d8';
+                color: @green;
+                .fontawesome;
+                line-height: 0;
+                padding-bottom: 0.6em;
+              }
+              &.active{
+                background-color: transparent;
+                height: auto;
+                margin: 2px;
+                width: auto;
+                color: @white;
+                &:before{
+                  color: @white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .section-stay-in-touch{
     div.gform_wrapper{
