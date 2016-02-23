@@ -20,8 +20,7 @@ if(is_front_page()){
     }
         echo $this->get_image_html( $instance, true );
     
-    if ( $link ) {
-        $linktext = $linktext != ''?$linktext:'Read More >';
+    if ( $link && $linktext != '') {
         echo '<div class="link"><a class="'.$this->widget_options['classname'].'-link readmore" href="'.$link.'" target="'.$linktarget.'">'.$linktext.' ></a><div class="clear"></div></div>';
     }
     echo '<div class="clear"></div>
@@ -36,8 +35,7 @@ if(is_front_page()){
         echo wpautop( $description );
         echo "</div>";
     }
-    if ( $link ) {
-        $linktext = $linktext != ''?$linktext:'Read More >';
+    if (  $link && $linktext != '' ) {
         echo '<div class="link"><a class="'.$this->widget_options['classname'].'-link readmore" href="'.$link.'" target="'.$linktarget.'">'.$linktext.' ></a><div class="clear"></div></div>';
     }
     echo '<div class="clear"></div>
