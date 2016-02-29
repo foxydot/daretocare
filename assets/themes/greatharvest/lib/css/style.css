@@ -7191,6 +7191,7 @@ Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
   background-color: #FFF;
+  padding-bottom: 20px;
 }
 .site-header .wrap {
   padding: 40px 0;

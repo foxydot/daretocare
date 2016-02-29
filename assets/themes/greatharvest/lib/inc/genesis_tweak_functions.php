@@ -567,4 +567,8 @@ if(!function_exists('msdlab_custom_hooks_management')){
     }
 }
 
-
+function msdlab_clear_text_markup($markup){
+    //if(is_front_page()){
+        ts_data($markup);
+    //}
+}

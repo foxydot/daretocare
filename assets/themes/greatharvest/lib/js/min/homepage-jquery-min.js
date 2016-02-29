@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){var e=$("#homepage-widgets section.widget").length;$("#homepage-widgets").addClass("cols-"+e);var s=12/e;$("#homepage-widgets section.widget").addClass("col-sm-"+s),$("#homepage-widgets section.widget").addClass("col-xs-12")});

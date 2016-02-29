@@ -279,38 +279,56 @@
 .site-inner {
   display: none;
 }
-.sectioned-page-wrapper .section {
+html * .sectioned-page-wrapper .section {
   color: #7F7F7F;
   font-weight: 300;
 }
-.sectioned-page-wrapper .section a,
-.sectioned-page-wrapper .section a:link,
-.sectioned-page-wrapper .section a:visited {
+html * .sectioned-page-wrapper .section a,
+html * .sectioned-page-wrapper .section a:link,
+html * .sectioned-page-wrapper .section a:visited {
   color: #90C848;
 }
-.sectioned-page-wrapper .section h1,
-.sectioned-page-wrapper .section h2,
-.sectioned-page-wrapper .section h3,
-.sectioned-page-wrapper .section h4,
-.sectioned-page-wrapper .section h5,
-.sectioned-page-wrapper .section h6 {
+html * .sectioned-page-wrapper .section h1,
+html * .sectioned-page-wrapper .section h2,
+html * .sectioned-page-wrapper .section h3,
+html * .sectioned-page-wrapper .section h4,
+html * .sectioned-page-wrapper .section h5,
+html * .sectioned-page-wrapper .section h6 {
   color: #7F7F7F;
   font-weight: 300;
   margin: 0.5em 0;
 }
-.sectioned-page-wrapper .section .section-title h3 {
+html * .sectioned-page-wrapper .section .section-title h3 {
   font-size: 4rem;
 }
-.sectioned-page-wrapper .section-homepage-hero-slider {
+html * .sectioned-page-wrapper .section-homepage-hero-slider {
   background-color: #90C848;
 }
-.sectioned-page-wrapper .section-news-events-facebook {
+html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap {
+  padding: 0 0 120px 0;
+}
+html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label {
+  width: 100%;
+  text-align: center;
+  left: auto !important;
+  top: 600px !important;
+  background: #90C848 !important;
+}
+html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label h2,
+html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label h3 {
+  color: #FFF;
+}
+html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-bottom-nav-wrapper {
+  margin: 0;
+  text-align: right;
+}
+html * .sectioned-page-wrapper .section-news-events-facebook {
   padding: 2em 0;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p {
   margin: 0 auto;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block {
   position: relative;
   display: inline-block;
   color: #FFF;
@@ -319,8 +337,8 @@
   text-align: center;
   line-height: 1.2;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:before,
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:after {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:before,
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:after {
   content: ' ';
   display: block;
   position: absolute;
@@ -334,60 +352,60 @@
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:before {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:before {
   z-index: -2;
   opacity: 1;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:after {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:after {
   z-index: -1;
   opacity: 0.6;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.news,
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.news,
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event {
   padding: 4em;
   height: 13.5em;
   width: 13.5em;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.news:before {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.news:before {
   background-color: #A02816;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.news:after {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.news:after {
   background-image: url(../img/news.jpg);
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event:before {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event:before {
   background-color: #90C848;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event:after {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event:after {
   background-image: url(../img/event.jpg);
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.attend,
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.latest {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.attend,
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.latest {
   padding: 1.5em;
   height: 9em;
   width: 9em;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.attend:before {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.attend:before {
   background-color: #F16528;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.attend:after {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.attend:after {
   background-image: url(../img/attendAnEvent.jpg);
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.latest {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.latest {
   padding-left: 2em;
   padding-right: 2em;
   width: 18em;
   border-color: #90C848;
   background-color: #90C848;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block strong {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block strong {
   display: block;
   font-size: 2.4em;
   font-weight: 300;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block i {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block i {
   display: block;
   font-size: 2em;
   border: 2px solid #FFF;
@@ -397,21 +415,21 @@
   text-align: center;
   margin: 0.4em auto;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:hover,
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:active {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:hover,
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:active {
   text-decoration: none;
 }
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:hover:after,
-.sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:active:after {
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:hover:after,
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:active:after {
   opacity: 1;
 }
-.sectioned-page-wrapper .section-county-info {
+html * .sectioned-page-wrapper .section-county-info {
   background-color: #90C848;
 }
-.sectioned-page-wrapper .section-county-info .section-body .wrap {
+html * .sectioned-page-wrapper .section-county-info .section-body .wrap {
   padding: 0;
 }
-.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators {
+html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators {
   bottom: auto;
   left: auto;
   margin: 0 auto;
@@ -420,7 +438,7 @@
   width: 100%;
   border-bottom: 1px solid #FFF;
 }
-.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li {
+html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li {
   border: 0px solid #fff;
   border-radius: 0;
   display: inline-block;
@@ -430,172 +448,172 @@
   text-indent: 0;
   width: auto;
 }
-.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.county {
+html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.county {
   display: inline-block;
 }
-.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.county:after {
+html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.county:after {
   display: block;
   content: '\f0d7';
   color: #90C848;
   font-family: "FontAwesome";
   line-height: 0;
 }
-.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.state {
+html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.state {
   color: #FFF;
   display: inline-block;
   margin-right: 0.16em;
 }
-.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.state:after {
+html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.state:after {
   display: block;
   content: '\f0d7';
   color: #90C848;
   font-family: "FontAwesome";
   line-height: 0;
 }
-.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.indiana {
+html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.indiana {
   border-left: 1px solid #7F7F7F;
   padding-left: 0.6rem;
 }
-.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li.active {
+html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li.active {
   background-color: transparent;
   height: auto;
   margin: 2px;
   width: auto;
   color: #FFF;
 }
-.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li.active .county:after {
+html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li.active .county:after {
   color: #FFF;
 }
-.sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li.active span.state {
+html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li.active span.state {
   color: #FFF;
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item {
   text-align: center;
   min-height: 24em;
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles {
   margin: 1em 0;
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles h3 {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles h3 {
   margin: 0;
   font-size: 1.4em;
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles h2 {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles h2 {
   margin: 0;
   font-size: 2.6em;
   color: #FFF;
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies {
   color: #FFF;
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:link,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:link,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:link,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:visited,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:visited,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:visited,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:active,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:active,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:active {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:link,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:link,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:link,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:visited,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:visited,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:visited,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:active,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:active,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:active {
   color: #FFF;
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:link:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:link:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:link:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:visited:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:visited:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:visited:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:active:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:active:hover,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:active:hover {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:link:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:link:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:link:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:visited:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:visited:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:visited:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people a:active:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio a:active:hover,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies a:active:hover {
   color: #F2F7FA;
   text-decoration: none;
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon {
   min-height: 9.8em;
   min-width: 9.8em;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon-people,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon-people,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon-people {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon-people,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon-people,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon-people {
   background-image: url(../img/icon-people.png);
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon-veggies,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon-veggies,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon-veggies {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon-veggies,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon-veggies,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon-veggies {
   background-image: url(../img/icon-food.png);
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people strong,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio strong,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies strong {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people strong,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio strong,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies strong {
   display: block;
   font-size: 2em;
   line-height: 1.2;
   font-weight: 500;
   margin-top: 0.5em;
 }
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people img,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio img,
-.sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies img {
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people img,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio img,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies img {
   border: 1px solid #FFF;
 }
-.sectioned-page-wrapper .section-dare-to-care-101 blockquote {
+html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote {
   border-top: 2px #90C848 solid;
   border-bottom: 2px #90C848 solid;
   padding: .5em;
   margin: 0;
 }
-.sectioned-page-wrapper .section-dare-to-care-101 blockquote p {
+html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote p {
   font-size: 1.6em;
   margin: 0 0 0.5em 0;
   line-height: 1;
 }
-.sectioned-page-wrapper .section-dare-to-care-101 blockquote p strong {
+html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote p strong {
   font-size: 2.6em;
   color: #90C848;
   font-weight: 400;
 }
-.sectioned-page-wrapper .section-dare-to-care-101 blockquote p .left {
+html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote p .left {
   float: left;
   margin-right: 2.5rem;
 }
-.sectioned-page-wrapper .section-dare-to-care-101 blockquote p em {
+html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote p em {
   font-style: normal;
   color: #7F7F7F;
   font-weight: 400;
 }
-.sectioned-page-wrapper .section-dare-to-care-101 blockquote:before {
+html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote:before {
   content: '';
 }
-.sectioned-page-wrapper .section-dare-to-care-101 .section-content > p.last-child {
+html * .sectioned-page-wrapper .section-dare-to-care-101 .section-content > p.last-child {
   font-size: 1.6em;
   margin: 1em 0;
 }
-.sectioned-page-wrapper .section-how-to-help {
+html * .sectioned-page-wrapper .section-how-to-help {
   border-top: 6px solid #90C848;
 }
-.sectioned-page-wrapper .section-how-to-help .section-body .wrap {
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap {
   padding: 0;
   max-width: 100%;
   background-color: #90C848;
 }
-.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help .carousel-inner .item img {
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help .carousel-inner .item img {
   margin: 0 auto;
 }
-.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators {
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators {
   bottom: auto;
   left: auto;
   margin: 0 auto;
@@ -604,7 +622,7 @@
   width: 100%;
   border-bottom: 1px solid #FFF;
 }
-.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li {
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li {
   border: 0px solid #fff;
   border-radius: 0;
   display: inline-block;
@@ -614,12 +632,12 @@
   text-indent: 0;
   width: auto;
 }
-.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a,
-.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a:link,
-.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a:visited {
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a,
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a:link,
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a:visited {
   color: #FFF;
 }
-.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li:before {
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li:before {
   display: block;
   content: '\f0d8';
   color: #90C848;
@@ -627,56 +645,56 @@
   line-height: 0;
   padding-bottom: 0.6em;
 }
-.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li.active {
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li.active {
   background-color: transparent;
   height: auto;
   margin: 2px;
   width: auto;
   color: #FFF;
 }
-.sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li.active:before {
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li.active:before {
   color: #FFF;
 }
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading {
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading {
   margin: 0;
 }
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading h3.gform_title {
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading h3.gform_title {
   font-weight: 300;
   text-align: center;
 }
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading span.gform_description {
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading span.gform_description {
   width: 40%;
   float: left;
   color: #7F7F7F;
   font-size: 1.4rem;
 }
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body {
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body {
   width: 59%;
   float: right;
 }
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body li,
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body form li {
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body li,
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body form li {
   margin: 0;
   padding: 0;
 }
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body li label,
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body form li label {
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body li label,
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body form li label {
   display: none;
 }
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer {
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer {
   width: 30%;
   float: right;
   margin: -32px 0 0;
   padding: 0 1%;
 }
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer input[type="submit"] {
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer input[type="submit"] {
   background-color: #A12616;
   border-radius: 0;
   margin: 0;
   padding: 3px 24px;
   width: 100%;
 }
-.sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer input[type="submit"]:hover {
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer input[type="submit"]:hover {
   background-color: #ce311c;
 }
 @media only screen and (max-width: 939px) {
