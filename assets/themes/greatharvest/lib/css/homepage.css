@@ -305,7 +305,7 @@ html * .sectioned-page-wrapper .section-homepage-hero-slider {
   background-color: #90C848;
 }
 html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap {
-  padding: 0 0 120px 0;
+  padding: 0;
 }
 html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label {
   width: 100%;
@@ -432,7 +432,7 @@ html * .sectioned-page-wrapper .section-county-info .section-body .wrap {
 html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators {
   bottom: auto;
   left: auto;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   padding: 0;
   position: static;
   width: 100%;

@@ -7649,6 +7649,9 @@ Site Navigation
 .widget_advanced_menu .menu > li > ul.sub-menu li > ul.sub-menu {
   margin-left: 4rem;
 }
+.widget_advanced_menu .menu > li > ul.sub-menu li.last-child {
+  border-bottom: 0;
+}
 .widget_advanced_menu .menu > li.open > ul.sub-menu {
   height: auto;
   max-height: 400px;

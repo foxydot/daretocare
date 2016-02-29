@@ -29,7 +29,6 @@ class KohlerConnected extends MSDConnected {
             print '<div class="col-md-5 align-right">';
         }
         if ( $address ){
-            print '<h3>Address</h3>';
             $bizname = do_shortcode('[msd-bizname]'); 
             if ( $bizname ){
                 print '<div class="connected-bizname">'.$bizname.'</div>';
