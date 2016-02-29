@@ -7602,6 +7602,9 @@ Site Navigation
 .nav-footer li.menu-item.last-child {
   border: 0;
 }
+.widget_advanced_menu {
+  margin-bottom: 7.2rem !important;
+}
 .widget_advanced_menu .menu > li i {
   margin-right: 1em;
   color: #959595;
