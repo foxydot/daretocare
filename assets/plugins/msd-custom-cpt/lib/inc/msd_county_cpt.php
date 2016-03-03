@@ -185,6 +185,8 @@ if (!class_exists('MSDCountyCPT')) {
             $county_data->the_meta($county_id);
             switch($key){
                 case 'insecurity_charts':
+                    $percent_insecurity = floatval($county_data->get_the_value('percent_insecurity'));
+                    $percent_child_insecurity = floatval($county_data->get_the_value('percent_child_insecurity'));
                     $ret = '<div class="pie-charts row">
                         <div class="col-sm-6 col-xs-12">
                             <h4>Food Insecurity</h4>
@@ -192,7 +194,7 @@ if (!class_exists('MSDCountyCPT')) {
                                 <canvas id="insecurity-chart-area" width="120"/>
                             </div>
                             <div class="col-xs-6 data">
-                                <strong class="percentage">'.$county_data->get_the_value('percent_insecurity').'%</strong>
+                                <strong class="percentage">'.$percent_insecurity.'%</strong>
                                 of '.$post->post_title.'\'s population or '.$county_data->get_the_value('insecure_individuals').' individuals
                             </div>
                         </div>
@@ -202,7 +204,7 @@ if (!class_exists('MSDCountyCPT')) {
                                 <canvas id="child-insecurity-chart-area" width="120"/>
                             </div>
                             <div class="col-xs-6 data">
-                                <strong class="percentage">'.$county_data->get_the_value('percent_child_insecurity').'%</strong>
+                                <strong class="percentage">'.$percent_child_insecurity.'%</strong>
                                 of '.$post->post_title.'\'s population or '.$county_data->get_the_value('insecure_children').' children
                             </div>
                         </div>
@@ -210,13 +212,13 @@ if (!class_exists('MSDCountyCPT')) {
                     <script type="text/javascript">
                         var totalData = [
                             {
-                                value: '.$county_data->get_the_value('percent_insecurity').',
+                                value: '.$percent_insecurity.',
                                 color:"#A02515",
                                 highlight: "#A02515",
                                 label: "Insecure"
                             },
                             {
-                                value: '.(100-$county_data->get_the_value('percent_insecurity')).',
+                                value: '.(100-$percent_insecurity).',
                                 color: "#C4C5C7",
                                 highlight: "#C4C5C7",
                                 label: "Total"
@@ -224,13 +226,13 @@ if (!class_exists('MSDCountyCPT')) {
                         ];
                         var childData = [
                             {
-                                value: '.$county_data->get_the_value('percent_child_insecurity').',
+                                value: '.$percent_child_insecurity.',
                                 color:"#A02515",
                                 highlight: "#A02515",
                                 label: "Insecure"
                             },
                             {
-                                value: '.(100-$county_data->get_the_value('percent_child_insecurity')).',
+                                value: '.(100-$percent_child_insecurity).',
                                 color: "#C4C5C7",
                                 highlight: "#C4C5C7",
                                 label: "Total"
