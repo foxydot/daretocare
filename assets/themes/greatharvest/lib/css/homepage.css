@@ -503,6 +503,10 @@ html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .i
   font-size: 2.6em;
   color: #FFF;
 }
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles h2 a,
+html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .titles h2 a:visited {
+  color: #FFF;
+}
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people,
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio,
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies {

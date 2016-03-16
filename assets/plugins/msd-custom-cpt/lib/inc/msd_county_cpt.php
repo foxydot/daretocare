@@ -185,8 +185,8 @@ if (!class_exists('MSDCountyCPT')) {
             $county_data->the_meta($county_id);
             switch($key){
                 case 'insecurity_charts':
-                    $percent_insecurity = floatval($county_data->get_the_value('percent_insecurity'));
-                    $percent_child_insecurity = floatval($county_data->get_the_value('percent_child_insecurity'));
+                    $percent_insecurity = $county_data->get_the_value('percent_insecurity')!=''?floatval($county_data->get_the_value('percent_insecurity')):'____';
+                    $percent_child_insecurity = $county_data->get_the_value('percent_child_insecurity')!=''?floatval($county_data->get_the_value('percent_child_insecurity')):'____';
                     $ret = '<div class="pie-charts row">
                         <div class="col-sm-6 col-xs-12">
                             <h4>Food Insecurity</h4>
@@ -205,7 +205,7 @@ if (!class_exists('MSDCountyCPT')) {
                             </div>
                             <div class="col-xs-6 data">
                                 <strong class="percentage">'.$percent_child_insecurity.'%</strong>
-                                of '.$post->post_title.'\'s population or '.$county_data->get_the_value('insecure_children').' children
+                                of '.$post->post_title.'\'s population under 18 or '.$county_data->get_the_value('insecure_children').' children
                             </div>
                         </div>
                     </div>
@@ -247,14 +247,17 @@ if (!class_exists('MSDCountyCPT')) {
                     </script>';
                     break;
                 case 'distribution_charts':
+                    $meals = $county_data->get_the_value('meals')!=''?$county_data->get_the_value('meals'):'____';
+                    $year = $county_data->get_the_value('data_year')!=''?$county_data->get_the_value('data_year'):'____';
+                    $produce =$county_data->get_the_value('pounds_produce')!=''?$county_data->get_the_value('pounds_produce'):'____';
                     $ret = '<div class="distribution-charts row">
                         <div class="col-sm-6 col-xs-12">
                             <div class="col-xs-6 chart">
                                 <i class="icon icon-plate"></i>
                             </div>
                             <div class="col-xs-6 data">
-                                <strong class="served">'.$county_data->get_the_value('meals').'</strong>
-                                meals provided to hungry neighbors in '.$post->post_title.' in '.$county_data->get_the_value('data_year').'
+                                <strong class="served">'.$meals.'</strong>
+                                meals provided to hungry neighbors in '.$post->post_title.' in '.$year.'
                             </div>
                         </div>
                         <div class="col-sm-6 col-xs-12">
@@ -262,8 +265,8 @@ if (!class_exists('MSDCountyCPT')) {
                                 <i class="icon icon-apple"></i>
                             </div>
                             <div class="col-xs-6 data">
-                                <strong class="served">'.$county_data->get_the_value('pounds_produce').'</strong>
-                                pounds of free produce distributed in '.$post->post_title.' in '.$county_data->get_the_value('data_year').'
+                                <strong class="served">'.$produce.'</strong>
+                                pounds of free produce distributed in '.$post->post_title.' in '.$year.'
                             </div>
                         </div>
                     </div>';
@@ -284,9 +287,10 @@ if (!class_exists('MSDCountyCPT')) {
                 $county_data->the_meta();
                 $image_id = get_attachment_id_from_src($county_data->get_the_value('bio_image'));
                 $image = wp_get_attachment_image( $image_id, 'biopic' );
+                $bio_name = strlen($county_data->get_the_value('bio_name'))>0?$county_data->get_the_value('bio_name'):'___________';
                 $ret = '<div id="bio" class="bio">
                 '.$image.'
-                <h3>'.$county_data->get_the_value('bio_name').'\'s Story</h3>
+                <h3>'.$bio_name.'\'s Story</h3>
                 <div class="story">
                 '.$county_data->get_the_value('bio').'
                 </div>
@@ -317,30 +321,34 @@ if (!class_exists('MSDCountyCPT')) {
                 $active = $i==0?' active':'';
                 $image_id = get_attachment_id_from_src($county->bio_image);
                 $image = wp_get_attachment_image( $image_id, 'thumbnail' );
+                $insecure_individuals = strlen($county->insecure_individuals)>0?$county->insecure_individuals:'____';
+                $bio_name = strlen($county->bio_name)>0?$county->bio_name:'____';
+                $pounds_food = strlen($county->pounds_food)>0?$county->pounds_food:'____';
+                $data_year = strlen($county->data_year)>0?$county->data_year:'____';
                 $body .= '
                 <div class="item'.$active.'">
                     <div class="titles">
                         <h3>Our Mission: Helping Those in Needs</h3>
-                        <h2>Hunger in '.$county->post_title.'</h2>
+                        <h2><a href="'.get_post_permalink($county->ID).'">Hunger in '.$county->post_title.'</a></h2>
                     </div>
                     <div class="row">
-                      <div class="col-sm-4 people">
+                      <a href="'.get_post_permalink($county->ID).'" class="col-sm-4 people">
                         <div class="icon icon-people"></div>
-                        <strong>'.$county->insecure_individuals.'</strong>
+                        <strong>'.$insecure_individuals.'</strong>
                         people who lack the food to live a healthy life
-                      </div>
+                      </a>
                       <div class="col-sm-4 bio">
                         <a href="'.get_post_permalink($county->ID).'#bio">
                         '.$image.'
                         <strong>Meet</strong>
-                        '.$county->bio_name.'
+                        '.$bio_name.'
                         </a>
                       </div>
-                      <div class="col-sm-4 veggies">
+                      <a href="'.get_post_permalink($county->ID).'"class="col-sm-4 veggies">
                         <div class="icon icon-veggies"></div>
-                        <strong>'.$county->pounds_food.'</strong>
-                        pounds of free food distributed to those in need in '.$county->data_year.'
-                      </div>
+                        <strong>'.$pounds_food.'</strong>
+                        pounds of free food distributed to those in need in '.$data_year.'
+                      </a>
                     </div>
                 </div>';
                 $i++;
