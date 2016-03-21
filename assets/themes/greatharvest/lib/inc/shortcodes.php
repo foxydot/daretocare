@@ -171,8 +171,8 @@ function how_to_help_shortcode_handler($atts){
         $active = $i==0?' active':'';
         $body .= '
         <div class="item'.$active.'">
-            <a href="'.get_permalink($help[ID]).'"> 
-                <img src="'.get_stylesheet_directory_uri().'/lib/img/howToHelpSlides/'.$help['img'].'" />
+            <a href="'.get_permalink($help[ID]).'" style="background-image:url('.get_stylesheet_directory_uri().'/lib/img/howToHelpSlides/'.$help['img'].');"> 
+                <img src="'.get_stylesheet_directory_uri().'/lib/img/spacer.gif" />
             </a>
         </div>';
         $i++;

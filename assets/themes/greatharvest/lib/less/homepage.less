@@ -320,6 +320,11 @@ html * .sectioned-page-wrapper{
   }
   .section-how-to-help{
     border-top: 6px solid @green;
+    .section-title{
+      h3{
+        padding-bottom: 2rem;
+      }
+    }
     .section-body{
       .wrap{
         padding: 0;
@@ -330,8 +335,15 @@ html * .sectioned-page-wrapper{
           }
           .carousel-inner{
             .item{
-              img{
-                margin: 0 auto;
+              a{
+                display: block;
+                height: 34vw;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                img{
+                  margin: 0 auto;
+                }
               }
             }
           }

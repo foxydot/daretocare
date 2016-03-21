@@ -609,12 +609,22 @@ html * .sectioned-page-wrapper .section-dare-to-care-101 .section-content > p.la
 html * .sectioned-page-wrapper .section-how-to-help {
   border-top: 6px solid #90C848;
 }
+html * .sectioned-page-wrapper .section-how-to-help .section-title h3 {
+  padding-bottom: 2rem;
+}
 html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap {
   padding: 0;
   max-width: 100%;
   background-color: #90C848;
 }
-html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help .carousel-inner .item img {
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help .carousel-inner .item a {
+  display: block;
+  height: 34vw;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help .carousel-inner .item a img {
   margin: 0 auto;
 }
 html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators {
