@@ -3,7 +3,7 @@ global $wpalchemy_media_access;
 $fields = array(
         'state'=>'State',
         'data_year'=>'Data Year',
-        'families_served'=>'Families Served',
+        //'families_served'=>'Families Served',
         'people_served'=>'People Served',
         'meals'=>'Meals Provided',
         'pounds_food'=>'Pounds of Food',
@@ -91,14 +91,16 @@ $states = array('AL'=>"Alabama",
             <div class="ginput_container"><input type="text" tabindex="5" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>"></div>
         </div>
     </li>
-    <?php $mb->the_field('families_served'); ?>
+    <?php
+    /*
+     $mb->the_field('families_served'); ?>
     <li class="gfield" id="field_<?php $mb->the_name(); ?>"><label for="<?php $mb->the_name(); ?>"
         class="gfield_label">Families Served</label>
     <div class="ginput_container">
             <div class="ginput_container"><input type="text" tabindex="5" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>"></div>
         </div>
     </li>
-    <?php $mb->the_field('people_served'); ?>
+    <?php */ $mb->the_field('people_served'); ?>
     <li class="gfield" id="field_<?php $mb->the_name(); ?>"><label for="<?php $mb->the_name(); ?>"
         class="gfield_label">People Served</label>
     <div class="ginput_container">
