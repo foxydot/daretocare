@@ -222,3 +222,124 @@
     }
   }
 }
+.sectioned-page-wrapper{
+  .wpgmp_map_container{ 
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    .wpgmp_map{
+      width: 65% !important;
+      float:left;
+      .wpgmp_search_form{
+        position: relative;
+        input.wpgmp_search_input{
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+      .wpgmp_tabs_container{
+        position: relative;
+        right: auto;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+        .wpgmp_toggle_main_container>div{
+          input[name="wpgmp_select_all"]{
+            margin-left: 12px;
+          }
+        }
+        .wpgmp_tab_item{
+          float: left;
+          width: 32%;
+          margin-left: 0.5%;
+          margin-right: 0.5%;
+        }
+        .wpgmp_toggle_container{
+          display: none;
+        }
+      }
+      .gm-style{
+        position: relative !important;
+      }
+      
+      .gm-style-iw{
+      }
+    }
+    .location_listing1{
+      width: 32% !important;
+      margin-left: 2%;
+      .wpgmp_listing_container{
+        .wpgmp_listing_header{
+          .wpgmp_search_form{
+            display: none;
+          }
+        }
+      }
+    }
+    .iwlist{
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid @offwhite;
+    }
+    .iwh6{
+      color: @green;
+      margin-bottom: 0;
+      font-size: 1.6rem;
+      a,a:link,a:visited{
+        color: @green;
+      }
+    }
+    .iwtext{
+      font-size: 1rem;
+      &.hours{
+        margin-top:0.2rem;
+      }
+      &.categories{
+        i.marker-icon{
+          display: inline-block;
+          height: 2rem;
+          width: 2rem;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          margin-right: 1rem;
+        }
+      }
+      h6{
+        color: @green;
+        margin-bottom: 0;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .sectioned-page-wrapper{
+    .wpgmp_map_container{ 
+      .wpgmp_map{
+        width: 100% !important;
+        float:none;
+        .wpgmp_search_form{
+          input.wpgmp_search_input{
+            width: 100%;
+            padding: 1rem;
+          }
+        }
+        .wpgmp_tabs_container{
+          .wpgmp_tab_item{
+            float: none;
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+      .location_listing1{
+        width: 100% !important;
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -8153,7 +8153,7 @@ Site Footer
 .page-template-page-sectioned .site-container .site-inner {
   background: transparent;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 .page-template-page-sectioned .site-container .site-inner .content-sidebar-wrap {
   background: transparent;
@@ -8537,6 +8537,106 @@ Site Footer
 }
 .single-county .bio h3 {
   margin-top: 1.6rem;
+}
+.sectioned-page-wrapper .wpgmp_map_container {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map {
+  width: 65% !important;
+  float: left;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_search_form {
+  position: relative;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_search_form input.wpgmp_search_input {
+  width: 100%;
+  padding: 1rem;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container {
+  position: relative;
+  right: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_toggle_main_container > div input[name="wpgmp_select_all"] {
+  margin-left: 12px;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_tab_item {
+  float: left;
+  width: 32%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_toggle_container {
+  display: none;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .gm-style {
+  position: relative !important;
+}
+.sectioned-page-wrapper .wpgmp_map_container .location_listing1 {
+  width: 32% !important;
+  margin-left: 2%;
+}
+.sectioned-page-wrapper .wpgmp_map_container .location_listing1 .wpgmp_listing_container .wpgmp_listing_header .wpgmp_search_form {
+  display: none;
+}
+.sectioned-page-wrapper .wpgmp_map_container .iwlist {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #F2F7FA;
+}
+.sectioned-page-wrapper .wpgmp_map_container .iwh6 {
+  color: #90C848;
+  margin-bottom: 0;
+  font-size: 1.6rem;
+}
+.sectioned-page-wrapper .wpgmp_map_container .iwh6 a,
+.sectioned-page-wrapper .wpgmp_map_container .iwh6 a:link,
+.sectioned-page-wrapper .wpgmp_map_container .iwh6 a:visited {
+  color: #90C848;
+}
+.sectioned-page-wrapper .wpgmp_map_container .iwtext {
+  font-size: 1rem;
+}
+.sectioned-page-wrapper .wpgmp_map_container .iwtext.hours {
+  margin-top: 0.2rem;
+}
+.sectioned-page-wrapper .wpgmp_map_container .iwtext.categories i.marker-icon {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 1rem;
+}
+.sectioned-page-wrapper .wpgmp_map_container .iwtext h6 {
+  color: #90C848;
+  margin-bottom: 0;
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 800px) {
+  .sectioned-page-wrapper .wpgmp_map_container .wpgmp_map {
+    width: 100% !important;
+    float: none;
+  }
+  .sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_search_form input.wpgmp_search_input {
+    width: 100%;
+    padding: 1rem;
+  }
+  .sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_tab_item {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sectioned-page-wrapper .wpgmp_map_container .location_listing1 {
+    width: 100% !important;
+    margin-left: 0;
+    margin-top: 0;
+  }
 }
 .nav-responsive ul,
 .nav-responsive li,
