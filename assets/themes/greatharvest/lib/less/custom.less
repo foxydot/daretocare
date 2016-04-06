@@ -228,11 +228,21 @@
     .wpgmp_map{
       width: 65% !important;
       float:left;
-      .wpgmp_search_form{
+      .visible_search{
         position: relative;
-        input.wpgmp_search_input{
-          width: 100%;
-          padding: 1rem;
+        input{
+          border-color: #ddd;
+        }
+        .wpgmp_search_input_visible{}
+        .wpgmp_search_input_submit{
+          width: 15%;
+          background-color: @green;
+          position: absolute;
+          top: 0;
+          right: 15px;
+          &:hover{
+            background-color: darken(@green,10%);
+          }
         }
       }
       .wpgmp_tabs_container{
@@ -283,7 +293,7 @@
       .wpgmp_listing_container{
         .wpgmp_listing_header{
           .wpgmp_search_form{
-            //display: none;
+            display: none;
           }
         }
       }

@@ -5,6 +5,6 @@ jQuery(document).ready(function($) {
         $('.wpgmp_search_input').val($(this).val());
     });
     $('.wpgmp_search_input_submit').click(function(){
-        $('.wpgmp_search_input').val($('.wpgmp_search_input_visible').val()).trigger('blur');
+        $('.wpgmp_search_input').val($('.wpgmp_search_input_visible').val()).trigger('keyup');
     });
 });

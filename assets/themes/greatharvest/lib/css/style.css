@@ -8545,12 +8545,21 @@ Site Footer
   width: 65% !important;
   float: left;
 }
-.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_search_form {
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .visible_search {
   position: relative;
 }
-.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_search_form input.wpgmp_search_input {
-  width: 100%;
-  padding: 1rem;
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .visible_search input {
+  border-color: #ddd;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .visible_search .wpgmp_search_input_submit {
+  width: 15%;
+  background-color: #90C848;
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .visible_search .wpgmp_search_input_submit:hover {
+  background-color: #76aa33;
 }
 .sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container {
   position: relative;
@@ -8591,6 +8600,9 @@ Site Footer
 .sectioned-page-wrapper .wpgmp_map_container .location_listing1 {
   width: 32% !important;
   margin-left: 2%;
+}
+.sectioned-page-wrapper .wpgmp_map_container .location_listing1 .wpgmp_listing_container .wpgmp_listing_header .wpgmp_search_form {
+  display: none;
 }
 .sectioned-page-wrapper .wpgmp_map_container .iwlist {
   padding-bottom: 1rem;
