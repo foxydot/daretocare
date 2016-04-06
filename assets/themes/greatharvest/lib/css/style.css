@@ -8569,6 +8569,19 @@ Site Footer
   margin-left: 0.5%;
   margin-right: 0.5%;
 }
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_tab_item:first-child {
+  float: none;
+  width: 100%;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_tab_item:first-child .wpgmp_specific_category_item {
+  display: none;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_tab_item .wpgmp_cat_title {
+  cursor: default;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_tab_item .wpgmp_cat_title span.arrow {
+  float: left;
+}
 .sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_toggle_container {
   display: none;
 }
@@ -8578,9 +8591,6 @@ Site Footer
 .sectioned-page-wrapper .wpgmp_map_container .location_listing1 {
   width: 32% !important;
   margin-left: 2%;
-}
-.sectioned-page-wrapper .wpgmp_map_container .location_listing1 .wpgmp_listing_container .wpgmp_listing_header .wpgmp_search_form {
-  display: none;
 }
 .sectioned-page-wrapper .wpgmp_map_container .iwlist {
   padding-bottom: 1rem;
@@ -8603,7 +8613,12 @@ Site Footer
 .sectioned-page-wrapper .wpgmp_map_container .iwtext.hours {
   margin-top: 0.2rem;
 }
-.sectioned-page-wrapper .wpgmp_map_container .iwtext.categories i.marker-icon {
+.sectioned-page-wrapper .wpgmp_map_container .iwtext.categories {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.sectioned-page-wrapper .wpgmp_map_container .iwtext.categories i.marker-icon,
+.sectioned-page-wrapper .wpgmp_map_container .iwtext.categories img {
   display: inline-block;
   height: 2rem;
   width: 2rem;

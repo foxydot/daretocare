@@ -252,6 +252,19 @@
           width: 32%;
           margin-left: 0.5%;
           margin-right: 0.5%;
+          &:first-child{
+            float: none;
+            width: 100%;
+            .wpgmp_specific_category_item{
+              display: none;
+            }
+          }
+          .wpgmp_cat_title{ 
+            cursor: default;
+            span.arrow {
+              float: left;
+            }
+          }
         }
         .wpgmp_toggle_container{
           display: none;
@@ -270,7 +283,7 @@
       .wpgmp_listing_container{
         .wpgmp_listing_header{
           .wpgmp_search_form{
-            display: none;
+            //display: none;
           }
         }
       }
@@ -294,7 +307,9 @@
         margin-top:0.2rem;
       }
       &.categories{
-        i.marker-icon{
+        margin-top: 4px;
+        margin-bottom: 4px;
+        i.marker-icon, img{
           display: inline-block;
           height: 2rem;
           width: 2rem;
