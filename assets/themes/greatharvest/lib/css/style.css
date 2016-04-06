@@ -8541,25 +8541,35 @@ Site Footer
 .sectioned-page-wrapper .wpgmp_map_container {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
-.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map {
-  width: 65% !important;
-  float: left;
-}
-.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .visible_search {
-  position: relative;
-}
-.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .visible_search input {
+.sectioned-page-wrapper .wpgmp_map_container .visible_search input,
+.sectioned-page-wrapper .wpgmp_map_container .visible_search select {
   border-color: #ddd;
 }
-.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .visible_search .wpgmp_search_input_submit {
+.sectioned-page-wrapper .wpgmp_map_container .visible_search .search {
+  float: left;
+  position: relative;
+  width: 79%;
+  margin-right: 1%;
+}
+.sectioned-page-wrapper .wpgmp_map_container .visible_search .search .wpgmp_search_input_submit {
   width: 15%;
   background-color: #90C848;
   position: absolute;
   top: 0;
   right: 15px;
 }
-.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .visible_search .wpgmp_search_input_submit:hover {
+.sectioned-page-wrapper .wpgmp_map_container .visible_search .search .wpgmp_search_input_submit:hover {
   background-color: #76aa33;
+}
+.sectioned-page-wrapper .wpgmp_map_container .visible_search .radius {
+  float: left;
+  position: relative;
+  width: 19%;
+  margin-left: 1%;
+}
+.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map {
+  width: 65% !important;
+  float: right;
 }
 .sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container {
   position: relative;
@@ -8601,7 +8611,13 @@ Site Footer
   width: 32% !important;
   margin-left: 2%;
 }
-.sectioned-page-wrapper .wpgmp_map_container .location_listing1 .wpgmp_listing_container .wpgmp_listing_header .wpgmp_search_form {
+.sectioned-page-wrapper .wpgmp_map_container .location_listing1 .wpgmp_listing_container .wpgmp_before_listing {
+  display: none;
+}
+.sectioned-page-wrapper .wpgmp_map_container .location_listing1 .wpgmp_listing_container .wpgmp_listing_header {
+  display: none;
+}
+.sectioned-page-wrapper .wpgmp_map_container .location_listing1 .wpgmp_listing_container .categories_filter {
   display: none;
 }
 .sectioned-page-wrapper .wpgmp_map_container .iwlist {

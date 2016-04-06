@@ -225,14 +225,15 @@
 .sectioned-page-wrapper{
   .wpgmp_map_container{ 
     box-shadow: 0 0 0 rgba(0,0,0,0);
-    .wpgmp_map{
-      width: 65% !important;
-      float:left;
-      .visible_search{
+    .visible_search{
+      input,select{
+        border-color: #ddd;
+      }
+      .search{
+        float: left;
         position: relative;
-        input{
-          border-color: #ddd;
-        }
+        width: 79%;
+        margin-right: 1%;
         .wpgmp_search_input_visible{}
         .wpgmp_search_input_submit{
           width: 15%;
@@ -245,6 +246,16 @@
           }
         }
       }
+      .radius{
+        float: left;
+        position: relative;
+        width: 19%;
+        margin-left: 1%;
+      }
+    }
+    .wpgmp_map{
+      width: 65% !important;
+      float:right;
       .wpgmp_tabs_container{
         position: relative;
         right: auto;
@@ -291,10 +302,16 @@
       width: 32% !important;
       margin-left: 2%;
       .wpgmp_listing_container{
+        .wpgmp_before_listing{
+          display: none;
+        }
         .wpgmp_listing_header{
-          .wpgmp_search_form{
             display: none;
+          .wpgmp_search_form{
           }
+        }
+        .categories_filter{
+          display: none;
         }
       }
     }
