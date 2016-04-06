@@ -8,6 +8,7 @@ jQuery(document).ready(function($) {
     });
     $('.wpgmp_search_input_submit').click(function(){
         $('.wpgmp_search_input').val($('.wpgmp_search_input_visible').val()).trigger('keyup');
+        $('.wpgmp_listing_list .iwlist:first-child .title a').trigger('click');
     });
     $('#map_radius_visible').change(function(){
         $('select[name="map_radius"]').val($(this).val()).trigger('change');
