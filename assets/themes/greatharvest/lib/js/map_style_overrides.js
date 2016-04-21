@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     $('select[name="map_radius"]').val('5').trigger('change');
-    var search_html = '<div class="search"><input class="wpgmp_search_input_visible" type="text" placeholder="Enter address, city, or ZIP code" name="wpgmp_search_input" rel="24"><input class="wpgmp_search_input_submit" type="submit" value="submit"></div>';
+    var search_html = '<div class="search"><input class="wpgmp_search_input_visible" type="text" placeholder="Enter address, city, and ZIP code" name="wpgmp_search_input" rel="24"><input class="wpgmp_search_input_submit" type="submit" value="submit"></div>';
     var radius_html = '<div class="radius"><select id="map_radius_visible" class="map_radius_visible">' + $('select[name="map_radius"]').html() + '</select></div>';
     $('.wpgmp_map_container .wpgmp_map').before('<div class="visible_search">' + search_html + radius_html + '</div>');
     $('#map_radius_visible').val('5');
