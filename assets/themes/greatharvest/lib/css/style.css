@@ -8638,8 +8638,16 @@ Site Footer
 .sectioned-page-wrapper .wpgmp_map_container .iwtext {
   font-size: 1rem;
 }
+.sectioned-page-wrapper .wpgmp_map_container .iwtext h6 {
+  color: #90C848;
+  margin-bottom: 0;
+  font-size: 1.6rem;
+}
 .sectioned-page-wrapper .wpgmp_map_container .iwtext.hours {
   margin-top: 0.2rem;
+}
+.sectioned-page-wrapper .wpgmp_map_container .iwtext.hours h6 {
+  font-size: 1.2rem;
 }
 .sectioned-page-wrapper .wpgmp_map_container .iwtext.categories {
   margin-top: 4px;
@@ -8654,11 +8662,6 @@ Site Footer
   background-repeat: no-repeat;
   background-position: center center;
   margin-right: 1rem;
-}
-.sectioned-page-wrapper .wpgmp_map_container .iwtext h6 {
-  color: #90C848;
-  margin-bottom: 0;
-  font-size: 1.6rem;
 }
 @media only screen and (max-width: 800px) {
   .sectioned-page-wrapper .wpgmp_map_container .wpgmp_map {
