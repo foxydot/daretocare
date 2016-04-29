@@ -308,15 +308,17 @@ html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap
   padding: 0;
 }
 html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label {
-  width: 100%;
+  width: 101% !important;
   text-align: center;
   left: auto !important;
-  top: 600px !important;
+  top: 85% !important;
   background: #90C848 !important;
 }
 html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label h2,
-html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label h3 {
+html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label h3,
+html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label hr {
   color: #FFF;
+  margin: 0.25em;
 }
 html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-bottom-nav-wrapper {
   margin: 0;
