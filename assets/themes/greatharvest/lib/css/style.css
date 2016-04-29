@@ -8322,6 +8322,14 @@ Site Footer
     margin-left: 0px;
   }
 }
+body {
+  background-color: #F2F7FA;
+}
+.site-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #FFF;
+}
 .site-header .wrap {
   position: relative;
 }
