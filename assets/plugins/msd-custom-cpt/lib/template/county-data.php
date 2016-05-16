@@ -193,6 +193,22 @@ $states = array('AL'=>"Alabama",
                 <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
                 <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
         </div>
+    </li><?php $mb->the_field('bio_image_cropped'); ?>
+    <li class="gfield" id="field_<?php $mb->the_name(); ?>"><label for="<?php $mb->the_name(); ?>"
+        class="gfield_label">Bio Image Cropped</label>
+        <div class="ginput_container"> 
+    <?php if($mb->get_the_value() != ''){
+                    $thumb_array = wp_get_attachment_image_src( get_attachment_id_from_src($mb->get_the_value()), 'thumbnail' );
+                    $thumb = $thumb_array[0];
+                } else {
+                    $thumb = WP_PLUGIN_URL.'/msd-specialty-pages/lib/img/spacer.gif';
+                } ?>
+                <img class="preview-img" src="<?php print $thumb; ?>">
+                <?php $group_name = 'bio_image_cropped'; ?>
+                <?php $wpalchemy_media_access->setGroupName($group_name)->setInsertButtonLabel('Insert This')->setTab('gallery'); ?>
+                <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
+                <?php echo $wpalchemy_media_access->getButton(array('label' => '+')); ?>
+        </div>
     </li>
     <?php $mb->the_field('bio'); ?>
     <li class="gfield" id="field_<?php $mb->the_name(); ?>"><label for="<?php $mb->the_name(); ?>"
