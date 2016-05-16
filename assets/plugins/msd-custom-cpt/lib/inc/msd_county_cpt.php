@@ -319,7 +319,7 @@ if (!class_exists('MSDCountyCPT')) {
             $i=0;
             foreach($counties AS $county){
                 $active = $i==0?' active':'';
-                $image_id = get_attachment_id_from_src($county->bio_image);
+                $image_id = $county->bio_image_cropped!=''?get_attachment_id_from_src($county->bio_image_cropped):get_attachment_id_from_src($county->bio_image);                
                 $image = wp_get_attachment_image( $image_id, 'thumbnail' );
                 $insecure_individuals = strlen($county->insecure_individuals)>0?$county->insecure_individuals:'____';
                 $bio_name = strlen($county->bio_name)>0?$county->bio_name:'____';
@@ -393,6 +393,7 @@ if (!class_exists('MSDCountyCPT')) {
                 'pop_children'=>'Total Population of Children',
                 'bio_name'=>'Bio Name',
                 'bio_image'=>'Bio Image',
+                'bio_image_cropped'=>'Bio Image Cropped',
                 'bio'=>'Bio Story'
             );
             $posts = get_posts($args);
