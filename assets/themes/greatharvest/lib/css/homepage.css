@@ -286,7 +286,7 @@ html * .sectioned-page-wrapper .section {
 html * .sectioned-page-wrapper .section a,
 html * .sectioned-page-wrapper .section a:link,
 html * .sectioned-page-wrapper .section a:visited {
-  color: #90C848;
+  color: #8DC63F;
 }
 html * .sectioned-page-wrapper .section h1,
 html * .sectioned-page-wrapper .section h2,
@@ -302,21 +302,23 @@ html * .sectioned-page-wrapper .section .section-title h3 {
   font-size: 4rem;
 }
 html * .sectioned-page-wrapper .section-homepage-hero-slider {
-  background-color: #90C848;
+  background-color: #8DC63F;
 }
 html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap {
   padding: 0;
 }
 html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label {
-  width: 100%;
+  width: 101% !important;
   text-align: center;
   left: auto !important;
-  top: 600px !important;
-  background: #90C848 !important;
+  top: 85% !important;
+  background: #8DC63F !important;
 }
 html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label h2,
-html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label h3 {
+html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label h3,
+html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label hr {
   color: #FFF;
+  margin: 0.25em;
 }
 html * .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-bottom-nav-wrapper {
   margin: 0;
@@ -376,7 +378,7 @@ html * .sectioned-page-wrapper .section-news-events-facebook .section-body .sect
   background-image: url(../img/news.jpg);
 }
 html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event:before {
-  background-color: #90C848;
+  background-color: #8DC63F;
 }
 html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block.event:after {
   background-image: url(../img/event.jpg);
@@ -397,8 +399,8 @@ html * .sectioned-page-wrapper .section-news-events-facebook .section-body .sect
   padding-left: 2em;
   padding-right: 2em;
   width: 18em;
-  border-color: #90C848;
-  background-color: #90C848;
+  border-color: #8DC63F;
+  background-color: #8DC63F;
 }
 html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block strong {
   display: block;
@@ -424,7 +426,7 @@ html * .sectioned-page-wrapper .section-news-events-facebook .section-body .sect
   opacity: 1;
 }
 html * .sectioned-page-wrapper .section-county-info {
-  background-color: #90C848;
+  background-color: #8DC63F;
 }
 html * .sectioned-page-wrapper .section-county-info .section-body .wrap {
   padding: 0;
@@ -454,7 +456,7 @@ html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indica
 html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.county:after {
   display: block;
   content: '\f0d7';
-  color: #90C848;
+  color: #8DC63F;
   font-family: "FontAwesome";
   line-height: 0;
 }
@@ -466,7 +468,7 @@ html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indica
 html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indicators li span.state:after {
   display: block;
   content: '\f0d7';
-  color: #90C848;
+  color: #8DC63F;
   font-family: "FontAwesome";
   line-height: 0;
 }
@@ -575,8 +577,8 @@ html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .i
   border: 1px solid #FFF;
 }
 html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote {
-  border-top: 2px #90C848 solid;
-  border-bottom: 2px #90C848 solid;
+  border-top: 2px #8DC63F solid;
+  border-bottom: 2px #8DC63F solid;
   padding: .5em;
   margin: 0;
 }
@@ -587,7 +589,7 @@ html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote p {
 }
 html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote p strong {
   font-size: 2.6em;
-  color: #90C848;
+  color: #8DC63F;
   font-weight: 400;
 }
 html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote p .left {
@@ -607,7 +609,7 @@ html * .sectioned-page-wrapper .section-dare-to-care-101 .section-content > p.la
   margin: 1em 0;
 }
 html * .sectioned-page-wrapper .section-how-to-help {
-  border-top: 6px solid #90C848;
+  border-top: 6px solid #8DC63F;
 }
 html * .sectioned-page-wrapper .section-how-to-help .section-title h3 {
   padding-bottom: 2rem;
@@ -615,7 +617,7 @@ html * .sectioned-page-wrapper .section-how-to-help .section-title h3 {
 html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap {
   padding: 0;
   max-width: 100%;
-  background-color: #90C848;
+  background-color: #8DC63F;
 }
 html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help .carousel-inner .item a {
   display: block;
@@ -654,7 +656,7 @@ html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol
 html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li:before {
   display: block;
   content: '\f0d8';
-  color: #90C848;
+  color: #8DC63F;
   font-family: "FontAwesome";
   line-height: 0;
   padding-bottom: 0.6em;
