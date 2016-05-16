@@ -21,3 +21,21 @@
 * The files are enqueued via functions.php
 *
 */
+
+
+#contact table, td, th {
+    border: 1px solid black;
+}
+
+#contact table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#contact th {
+    text-align: left;
+}
+
+#contact th, td {
+    padding: 15px;
+}
