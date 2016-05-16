@@ -338,6 +338,7 @@ html * .sectioned-page-wrapper .section-news-events-facebook .section-body .sect
   margin: 0.3em;
   text-align: center;
   line-height: 1.2;
+  z-index: 1;
 }
 html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:before,
 html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:after {
