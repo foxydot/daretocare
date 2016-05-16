@@ -652,7 +652,8 @@ html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol
 html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a,
 html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a:link,
 html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li a:visited {
-  color: #FFF;
+  color: #000;
+  text-decoration: none;
 }
 html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li:before {
   display: block;
@@ -671,6 +672,12 @@ html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol
 }
 html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li.active:before {
   color: #FFF;
+}
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li.active a,
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li.active a:link,
+html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol.carousel-indicators li.active a:visited {
+  color: #FFF;
+  text-decoration: none;
 }
 html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading {
   margin: 0;
