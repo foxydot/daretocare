@@ -61,7 +61,7 @@ function msd_inline_login($atts){
 	if(is_user_logged_in()){
 		$ret = '<div>
 		<p>
-		<a href="https://dtc.daretocare.org/PrimariusWW/login.aspx" target="_blank" id="agency-button-2" class="agency-button">Click to Proceed to PWW</a>
+		<a href="https://dtc.daretocare.org/PrimariusWW/login.aspx" target="_blank" id="agency-button-2" class="button agency-button">Click to Proceed to PWW</a>
 		</p>
 		</div>';
 	} else {
