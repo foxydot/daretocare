@@ -8492,7 +8492,9 @@ body {
 }
 .site-inner main.content article.page .entry-content strong,
 .site-inner main.content article.page .entry-content h3,
-.site-inner main.content article.page .entry-content h4,
+.site-inner main.content article.page .entry-content h4 {
+  color: #7F7F7F;
+}
 .site-inner main.content article.page .entry-content a,
 .site-inner main.content article.page .entry-content a:visited {
   color: #006B3F;
