@@ -127,7 +127,7 @@ function fb_code_function(){
 }
 
 add_shortcode('how-to-help-nav','how_to_help_shortcode_handler');
-function how_to_help_shortcode_handler($atts){
+function how_to_help_shortcode_handler($atts, $content){
     //the header
     $helps = array(
         'funds' => array(
@@ -146,7 +146,7 @@ function how_to_help_shortcode_handler($atts){
             'img' => 'slide-volunteer.jpg',
         ),
         'drives' => array(
-            'nav' => 'Food Drives',
+            'nav' => 'Host a Food/Funds Drive',
             'ID' => '35',
             'img' => 'slide-drives.jpg',
         ),
