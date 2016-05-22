@@ -149,12 +149,12 @@ function how_to_help_shortcode_handler($atts, $content){
             'nav' => 'Host a Food/Funds Drive',
             'ID' => '35',
             'img' => 'slide-drives.jpg',
-        ),
+        ),/*
         'virtual' => array(
             'nav' => 'Virtual Food Drives',
             'ID' => '',
             'img' => 'slide-virtual.jpg',
-        ),
+        ),*/
     );
     $i=0;
     foreach($helps AS $help){
