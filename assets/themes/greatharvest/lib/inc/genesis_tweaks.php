@@ -30,16 +30,16 @@ add_action('genesis_header','msdlab_do_header' );
 
 add_action('genesis_header','msdlab_header_right' );
 /**
- * Move nav into header
- */
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
-add_action( 'genesis_header', 'msdlab_do_nav' );
-/**
  * Move secodary nav into pre-header
  */
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_header', 'genesis_do_subnav' );
 //add_action('msdlab_pre_header','msdlab_pre_header_sidebar');
+/**
+ * Move nav into header
+ */
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_header', 'msdlab_do_nav' );
 
 remove_action('genesis_header','genesis_do_header' );
 add_action('genesis_header','msdlab_do_header' );

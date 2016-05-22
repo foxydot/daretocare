@@ -118,7 +118,7 @@ Site Navigation
 .nav-primary {
   .customheader(1.4);
   width: 60%;
-  float: left;
+  float: right;
   margin-top: 1.6rem;
   text-align: right;
   li.menu-item{
@@ -185,11 +185,13 @@ Site Navigation
 .nav-secondary {
   padding: 0;
   width: 60%;
-  float: left;
+  float: right;
   text-align: right;
+  margin-top: 2.8rem;
     li.menu-item{
       width:auto;
       position: relative;
+      vertical-align:top;
       >a{
         .custombody(1.4);
         padding: 0 1rem;
@@ -219,11 +221,35 @@ Site Navigation
           }
         }
       }
-    }
-    li.menu-item.last-child{
-      border: 0;
-      a{
-        padding-right: 2.2rem;
+      &.large{
+        width: 60px;
+        height: 60px;
+        a{
+          color: @white;
+          text-align: center;
+          display: block;
+          padding: 0.75em 0.5em;
+          margin: 0;
+          line-height: 1.25;
+        }
+        &.green {
+          background-color: @green;
+        }
+        &.red {
+          background-color: @red;
+        }
+        &:hover{
+          a{
+            color: @white;
+            text-decoration: none;
+          }
+          &.green{
+            background-color: darken(@green, 10%);
+          }
+          &.red {
+            background-color: darken(@red, 10%);
+          }
+        }
       }
     }
     li:hover{

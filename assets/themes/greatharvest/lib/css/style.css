@@ -7191,7 +7191,8 @@ Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
   background-color: #FFF;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .site-header .wrap {
   padding: 40px 0;
@@ -7467,7 +7468,7 @@ Site Navigation
   font-size: 1.4rem;
   line-height: 1.625;
   width: 60%;
-  float: left;
+  float: right;
   margin-top: 1.6rem;
   text-align: right;
 }
@@ -7537,12 +7538,14 @@ Site Navigation
 .nav-secondary {
   padding: 0;
   width: 60%;
-  float: left;
+  float: right;
   text-align: right;
+  margin-top: 2.8rem;
 }
 .nav-secondary li.menu-item {
   width: auto;
   position: relative;
+  vertical-align: top;
 }
 .nav-secondary li.menu-item > a {
   font-family: "Fira Sans", "Helvetica Neue", "Trebuchet MS", Calibri, sans-serif;
@@ -7577,11 +7580,33 @@ Site Navigation
   padding: 0 0 0 20px;
   background-position: left center;
 }
-.nav-secondary li.menu-item.last-child {
-  border: 0;
+.nav-secondary li.menu-item.large {
+  width: 60px;
+  height: 60px;
 }
-.nav-secondary li.menu-item.last-child a {
-  padding-right: 2.2rem;
+.nav-secondary li.menu-item.large a {
+  color: #FFF;
+  text-align: center;
+  display: block;
+  padding: 0.75em 0.5em;
+  margin: 0;
+  line-height: 1.25;
+}
+.nav-secondary li.menu-item.large.green {
+  background-color: #8DC63F;
+}
+.nav-secondary li.menu-item.large.red {
+  background-color: #A12616;
+}
+.nav-secondary li.menu-item.large:hover a {
+  color: #FFF;
+  text-decoration: none;
+}
+.nav-secondary li.menu-item.large:hover.green {
+  background-color: #72a230;
+}
+.nav-secondary li.menu-item.large:hover.red {
+  background-color: #741b10;
 }
 .nav-secondary li:hover ul {
   display: block;
@@ -8336,23 +8361,6 @@ body {
 .site-header .header-widget-area {
   position: absolute;
   right: 0;
-}
-.site-header .connected-text {
-  float: right;
-}
-.site-header .connected-text a.food-btn {
-  max-width: 60px;
-  background-color: #8DC63F;
-  color: #FFF;
-  text-align: center;
-  display: block;
-  padding: 0.75em 0.5em;
-  margin: 1em 0;
-}
-.site-header .connected-text a.food-btn:hover {
-  background-color: #72a230;
-  color: #FFF;
-  text-decoration: none;
 }
 .connected-social .social-media {
   float: right;

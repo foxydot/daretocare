@@ -14,8 +14,8 @@ jQuery(document).ready(function($) {
         };
       });
 
-    $('.nav-secondary ul.menu>li').after(function(){
-        if(!$(this).hasClass('last-child') && $(this).hasClass('menu-item') && $(this).css('display')!='none'){
+    $('.nav-secondary ul.menu>li').before(function(){
+        if(!$(this).hasClass('first-child') && !$(this).hasClass('large') && $(this).hasClass('menu-item') && $(this).css('display')!='none'){
             return '<li class="separator">|</li>';
         }
     });
