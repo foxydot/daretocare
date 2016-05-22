@@ -8707,6 +8707,13 @@ body {
 }
 /* Responsive Design Custom Styles
 ------------------------------------------------------------ */
+/* Patch for programs page icons*/
+@media only screen and (max-width: 1190px) {
+  .page.programs .site-inner {
+    background-size: 10.34vw auto;
+    padding-left: 10.34vw;
+  }
+}
 /* Smaller screens */
 @media only screen and (max-width: 801px) {
   /* Enter Your Custom Styles Here */
