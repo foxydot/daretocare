@@ -64,6 +64,7 @@ function msd_inline_login($atts){
 		<a href="https://dtc.daretocare.org/PrimariusWW/login.aspx" target="_blank" id="agency-button-2" class="button agency-button">Click to Proceed to PWW</a>
 		</p>
 		</div>';
+        $ret .= wp_nav_menu(array('echo' => false, 'menu' => 'agencybloglink'));
 	} else {
 		$ret = '<div>'.wp_login_form($args).'</div>';
 	}
