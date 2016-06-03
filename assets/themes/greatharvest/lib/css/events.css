@@ -248,8 +248,7 @@
 /* Neutrals */
 /* Arrows */
 /* Buttons */
-.button:hover,
-.button a:hover {
+.button:hover {
   background-color: #F16528;
   border-radius: 30px;
   padding: 6px 24px;

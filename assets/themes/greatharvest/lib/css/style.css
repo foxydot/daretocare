@@ -6515,8 +6515,7 @@ you can use the generic selector below, but it's slower:
 /* Neutrals */
 /* Arrows */
 /* Buttons */
-.button:hover,
-.button a:hover {
+.button:hover {
   background-color: #F16528;
   border-radius: 30px;
   padding: 6px 24px;
@@ -8362,10 +8361,10 @@ body {
   position: absolute;
   right: 0;
 }
-.connected-social .social-media {
+.social-media {
   float: right;
 }
-.connected-social .social-media a.fa {
+.social-media a.fa {
   background: #353535;
   color: #FFF;
   height: 3rem;
@@ -8375,55 +8374,55 @@ body {
   font-size: 2rem;
   border-radius: 8px;
 }
-.connected-social .social-media a.fa:before {
+.social-media a.fa:before {
   opacity: 1;
 }
-.connected-social .social-media a.fa.last-child {
+.social-media a.fa.last-child {
   margin-right: 0;
 }
-.connected-social .social-media a.fa-facebook:hover {
+.social-media a.fa-facebook:hover {
   background-color: #345AA1;
 }
-.connected-social .social-media a.fa-twitter:hover {
+.social-media a.fa-twitter:hover {
   background-color: #348DB9;
 }
-.connected-social .social-media a.fa-pinterest:hover {
+.social-media a.fa-pinterest:hover {
   background-color: #EC1A22;
 }
-.connected-social .social-media a.fa-google-plus:hover {
+.social-media a.fa-google-plus:hover {
   background-color: #000000;
 }
-.connected-social .social-media a.fa-linkedin:hover {
+.social-media a.fa-linkedin:hover {
   background-color: #66B5D3;
 }
-.connected-social .social-media a.fa-instagram:hover {
+.social-media a.fa-instagram:hover {
   background-color: #EC1A22;
 }
-.connected-social .social-media a.fa-tumblr:hover {
+.social-media a.fa-tumblr:hover {
   background-color: #3E5A70;
 }
-.connected-social .social-media a.fa-reddit:hover {
+.social-media a.fa-reddit:hover {
   background-color: #FF4400;
 }
-.connected-social .social-media a.fa-flickr:hover {
+.social-media a.fa-flickr:hover {
   background-color: #0062DD;
 }
-.connected-social .social-media a.fa-youtube:hover {
+.social-media a.fa-youtube:hover {
   background-color: #CC181E;
 }
-.connected-social .social-media a.fa-vimeo-square:hover {
+.social-media a.fa-vimeo-square:hover {
   background-color: #232021;
 }
-.connected-social .social-media a.fa-vine:hover {
+.social-media a.fa-vine:hover {
   background-color: #00BE8F;
 }
-.connected-social .social-media a.fa-share-alt:hover {
+.social-media a.fa-share-alt:hover {
   background-color: #00BF00;
 }
-.connected-social .social-media a.fa-envelope:hover {
+.social-media a.fa-envelope:hover {
   background-color: #999999;
 }
-.connected-social .social-media a.fa-rss:hover {
+.social-media a.fa-rss:hover {
   background-color: #F37D2A;
 }
 .page-banner {
