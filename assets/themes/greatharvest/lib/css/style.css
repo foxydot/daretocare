@@ -8366,7 +8366,7 @@ body {
 }
 .social-media a.fa {
   background: #353535;
-  color: #FFF;
+  color: #FFF !important;
   height: 3rem;
   width: 3rem;
   margin: 0.4rem;
