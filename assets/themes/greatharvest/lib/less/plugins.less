@@ -113,3 +113,50 @@ img#wpstats {
     }
   }
 }
+
+/* Shortcodes Ultimate */
+.entry-content{
+  .su-tabs{
+    background: transparent;
+    padding: 0;
+    .su-tabs-nav{
+      display: block;
+      &.tabs-2{
+        >span{
+          width: 40%;
+          margin: 5%;
+        }
+      }
+      &.tabs-3{
+        >span{
+          width: 23%;
+          margin: 5%;
+        }
+      }
+      &.tabs-4{
+        >span{
+          width: 15%;
+          margin: 5%;
+        }
+      }
+      >span{
+          float: left;
+          background-color: @white;
+          border: 2px solid darken(@green,10%);
+          border-radius: 0;
+          color: @green;
+          padding: 5%;
+          font-size: 1.5em;
+          text-align: center;
+          &.su-tabs-current{
+            color: @white;
+            background-color: @green;
+          }
+        
+      }
+    }
+    .su-tabs-panes{
+      clear: both;
+    }
+  }
+}

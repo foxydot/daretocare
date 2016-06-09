@@ -6,6 +6,12 @@ jQuery(document).ready(function($) {
 	
 	var numwidgets = $('#footer-widgets div.widget').length;
 	$('#footer-widgets').addClass('cols-'+numwidgets);
+
+    $('.su-tabs-nav').addClass(function(){
+        var numtabs = $(this).children('span').length;
+        return 'tabs-'+numtabs;
+    });
+    
 	$.each(['show', 'hide'], function (i, ev) {
         var el = $.fn[ev];
         $.fn[ev] = function () {

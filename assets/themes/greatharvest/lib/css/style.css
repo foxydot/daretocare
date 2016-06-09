@@ -7167,6 +7167,43 @@ img#wpstats {
 .gfield table.gsurvey-likert tbody tr td.gsurvey-likert-choice-label {
   background: none;
 }
+/* Shortcodes Ultimate */
+.entry-content .su-tabs {
+  background: transparent;
+  padding: 0;
+}
+.entry-content .su-tabs .su-tabs-nav {
+  display: block;
+}
+.entry-content .su-tabs .su-tabs-nav.tabs-2 > span {
+  width: 40%;
+  margin: 5%;
+}
+.entry-content .su-tabs .su-tabs-nav.tabs-3 > span {
+  width: 23%;
+  margin: 5%;
+}
+.entry-content .su-tabs .su-tabs-nav.tabs-4 > span {
+  width: 15%;
+  margin: 5%;
+}
+.entry-content .su-tabs .su-tabs-nav > span {
+  float: left;
+  background-color: #FFF;
+  border: 2px solid #72a230;
+  border-radius: 0;
+  color: #8DC63F;
+  padding: 5%;
+  font-size: 1.5em;
+  text-align: center;
+}
+.entry-content .su-tabs .su-tabs-nav > span.su-tabs-current {
+  color: #FFF;
+  background-color: #8DC63F;
+}
+.entry-content .su-tabs .su-tabs-panes {
+  clear: both;
+}
 /* Pre Header */
 .pre-header {
   background: #F2F7FA;
@@ -7696,6 +7733,7 @@ article.entry {
 .entry-content h3 {
   color: #353535;
   font-weight: 700;
+  font-size: 1.2em;
 }
 .entry-content .attachment a,
 .entry-content .gallery a {
