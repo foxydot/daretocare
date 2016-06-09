@@ -711,14 +711,14 @@ html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_f
   padding: 0 1%;
 }
 html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer input[type="submit"] {
-  background-color: #A12616;
+  background-color: #cb333b;
   border-radius: 0;
   margin: 0;
   padding: 3px 24px;
   width: 100%;
 }
 html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer input[type="submit"]:hover {
-  background-color: #ce311c;
+  background-color: #d65b62;
 }
 @media only screen and (max-width: 939px) {
   .sectioned-page-wrapper {

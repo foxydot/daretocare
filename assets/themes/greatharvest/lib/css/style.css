@@ -7632,7 +7632,7 @@ Site Navigation
   background-color: #8DC63F;
 }
 .nav-secondary li.menu-item.large.red {
-  background-color: #A12616;
+  background-color: #cb333b;
 }
 .nav-secondary li.menu-item.large:hover a {
   color: #FFF;
@@ -7642,7 +7642,7 @@ Site Navigation
   background-color: #72a230;
 }
 .nav-secondary li.menu-item.large:hover.red {
-  background-color: #741b10;
+  background-color: #a2292f;
 }
 .nav-secondary li:hover ul {
   display: block;
@@ -8564,13 +8564,13 @@ body {
 .single-county article.county .entry-content .pie-charts .data strong,
 .single-county article.county .entry-content .distribution-charts .data strong {
   font-size: 3em;
-  color: #A12616;
+  color: #cb333b;
   display: block;
   line-height: 1;
 }
 .single-county article.county .entry-content .pie-charts .chart .icon,
 .single-county article.county .entry-content .distribution-charts .chart .icon {
-  background-color: #A12616;
+  background-color: #cb333b;
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 50%;
