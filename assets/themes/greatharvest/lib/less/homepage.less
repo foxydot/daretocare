@@ -295,10 +295,10 @@ html * .sectioned-page-wrapper{
       border-top: 2px @green solid;
       border-bottom: 2px @green solid;
       padding: .5em;
-      margin: 0;
+      margin: 1em 0;
       p{
         font-size: 1.6em;
-        margin: 0 0 0.5em 0;
+        margin: 0.5em 0;
         line-height: 1;
         strong{
           font-size: 2.6em;
@@ -319,9 +319,15 @@ html * .sectioned-page-wrapper{
         content: '';
       }
     }
-    .section-content>p.last-child{
-      font-size: 1.6em;
-      margin: 1em 0;
+    .section-content{
+        >p.last-child{
+        font-size: 1.6em;
+        line-height: 1.25;
+      }
+      iframe{
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
     }
   }
   .section-how-to-help{
