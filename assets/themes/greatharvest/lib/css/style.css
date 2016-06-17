@@ -7566,6 +7566,9 @@ Site Navigation
 .nav-primary li.current-menu-ancestor a:hover {
   text-decoration: none;
 }
+.nav-primary li.last-child a {
+  padding-right: 0;
+}
 .mainNav > ul > li.first > ul > li.title > ul > li > ul > li {
   padding: 3px 0;
 }
@@ -8542,7 +8545,7 @@ body {
 }
 .site-inner main.content article.page .entry-content a,
 .site-inner main.content article.page .entry-content a:visited {
-  color: #006B3F;
+  color: #046a38;
 }
 .site-inner main.content article.page .entry-content a:hover {
   color: #8DC63F;
