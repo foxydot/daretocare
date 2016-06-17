@@ -735,6 +735,12 @@ html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_f
   .sectioned-page-wrapper .section-body .wrap {
     padding: 0;
   }
+  .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label h2 {
+    font-size: 3vw !important;
+  }
+  .sectioned-page-wrapper .section-homepage-hero-slider .section-body .wrap .ls-wp-fullwidth-container .ls-wp-fullwidth-helper .ls-wp-container .ls-inner .ls-slide .slide-label h3 {
+    font-size: 2vw !important;
+  }
 }
 @media only screen and (max-width: 550px) {
   .sectioned-page-wrapper {
