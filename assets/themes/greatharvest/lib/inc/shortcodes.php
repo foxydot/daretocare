@@ -137,7 +137,7 @@ function how_to_help_shortcode_handler($atts, $content){
         ),
         'food' => array(
             'nav' => 'Give Food',
-            'ID' => '8',
+            'ID' => '39',
             'img' => 'slide-food.jpg',
         ),
         'volunteer' => array(
