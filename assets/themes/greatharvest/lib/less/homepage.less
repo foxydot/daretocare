@@ -186,7 +186,7 @@ html * .sectioned-page-wrapper{
           display: inline-block;
           height: auto;
           margin: 0.16em 0;
-          padding: 0.6em 0.2em 0;
+          padding: 0.6em 0.45em 0;
           text-indent: 0;
           width: auto;
           span.county{
@@ -259,17 +259,20 @@ html * .sectioned-page-wrapper{
               }
             }
             .icon{
-              min-height: 9.8em;
-              min-width: 9.8em;
+              height: 9.8em;
+              width: 9.8em;
+              background-color: @white;
               background-repeat: no-repeat;
               background-position: center center;
               background-size: contain;
+              border-radius: 50%;
+              margin: 0 auto;
             }
             .icon-people{
-              background-image: url(../img/icon-people.png);
+              background-image: url(../img/icon-people-green.png);
             }
             .icon-veggies{
-              background-image: url(../img/icon-food.png);
+              background-image: url(../img/icon-food-green.png);
             }
             strong{
               display: block;
@@ -280,6 +283,7 @@ html * .sectioned-page-wrapper{
             }
             img{
               border: 1px solid @white;
+              border-radius: 50%;
             }
           }
         }

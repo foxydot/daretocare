@@ -446,7 +446,7 @@ html * .sectioned-page-wrapper .section-county-info #counties ol.carousel-indica
   display: inline-block;
   height: auto;
   margin: 0.16em 0;
-  padding: 0.6em 0.2em 0;
+  padding: 0.6em 0.45em 0;
   text-indent: 0;
   width: auto;
 }
@@ -546,21 +546,24 @@ html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .i
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon,
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon,
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon {
-  min-height: 9.8em;
-  min-width: 9.8em;
+  height: 9.8em;
+  width: 9.8em;
+  background-color: #FFF;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon-people,
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon-people,
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon-people {
-  background-image: url(../img/icon-people.png);
+  background-image: url(../img/icon-people-green.png);
 }
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people .icon-veggies,
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio .icon-veggies,
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies .icon-veggies {
-  background-image: url(../img/icon-food.png);
+  background-image: url(../img/icon-food-green.png);
 }
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .people strong,
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio strong,
@@ -575,6 +578,7 @@ html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .i
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .bio img,
 html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .item .veggies img {
   border: 1px solid #FFF;
+  border-radius: 50%;
 }
 html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote {
   border-top: 2px #8DC63F solid;
