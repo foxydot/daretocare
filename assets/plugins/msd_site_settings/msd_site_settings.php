@@ -2,7 +2,7 @@
 /*
 Plugin Name: MSD Site Settings
 Description: Provides settings panel for several social/address options and widgets/shortcodes/functions for display.
-Version: 0.9.4
+Version: 0.9.6
 Author: Catherine M OBrien Sandrick (CMOS)
 Author URI: http://msdlab.com/biological-assets/catherine-obrien-sandrick/
 GitHub Plugin URI: https://github.com/msdlab/msd_site_settings
@@ -20,24 +20,26 @@ if ( is_admin() ) {
 
 
 class MSDSocial{
-	private $the_path;
-	private $the_url;
-	public $icon_size;
-	function MSDSocial(){$this->__construct();}
+    private $the_path;
+    private $the_url;
+    public $icon_size;
+    private $ver;
+    function MSDSocial(){$this->__construct();}
     function __construct(){
-		$this->the_path = plugin_dir_path(__FILE__);
-		$this->the_url = plugin_dir_url(__FILE__);
-		$this->icon_size = get_option('msdsocial_icon_size')?get_option('msdsocial_icon_size'):'0';
-		/*
-		 * Pull in some stuff from other files
-		 */
-		//$this->requireDir($this->the_path . 'lib/inc');
+        $this->the_path = plugin_dir_path(__FILE__);
+        $this->the_url = plugin_dir_url(__FILE__);
+        $this->icon_size = get_option('msdsocial_icon_size')?get_option('msdsocial_icon_size'):'0';
+        $this->ver = '0.9.6';
+        /*
+         * Pull in some stuff from other files
+         */
+        //$this->requireDir($this->the_path . 'lib/inc');
         require_once($this->the_path . 'lib/inc/settings.php');
         require_once($this->the_path . 'lib/inc/widgets.php');
         if(!is_admin()){
-    		wp_enqueue_style('msd-social-style',$this->the_url.'lib/css/style.css');
-    		wp_enqueue_style('msd-social-style-'.$this->icon_size,$this->the_url.'lib/css/style'.$this->icon_size.'.css');
-            wp_enqueue_style('font-awesome-style','//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+            wp_enqueue_style('msd-social-style',$this->the_url.'lib/css/style.css');
+            wp_enqueue_style('msd-social-style-'.$this->icon_size,$this->the_url.'lib/css/style'.$this->icon_size.'.css');
+            wp_enqueue_style('font-awesome-style','//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
         }
         add_action('admin_enqueue_scripts', array(&$this,'add_admin_scripts') );
         add_action('admin_enqueue_scripts', array(&$this,'add_admin_styles') );
@@ -46,20 +48,20 @@ class MSDSocial{
         
         add_shortcode('msd-address',array(&$this,'get_address'));
         add_shortcode('msd-additional-locations',array(&$this,'get_additional_locations'));
-		add_shortcode('msd-bizname',array(&$this,'get_bizname'));
-		add_shortcode('msd-copyright',array(&$this,'get_copyright'));
-		add_shortcode('msd-digits',array(&$this,'get_digits'));
+        add_shortcode('msd-bizname',array(&$this,'get_bizname'));
+        add_shortcode('msd-copyright',array(&$this,'get_copyright'));
+        add_shortcode('msd-digits',array(&$this,'get_digits'));
         add_shortcode('msd-social',array(&$this,'social_media'));
         add_shortcode('msd-hours',array(&$this,'get_hours'));
-	}
+    }
 
         function add_admin_scripts() {
             global $current_screen;
             if($current_screen->id == 'settings_page_msdsocial-options'){
-                wp_enqueue_script('bootstrap-jquery','//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js',array('jquery'));
-                wp_enqueue_script('timepicker-jquery',$this->the_url.'lib/js/jquery.timepicker.min.js',array('jquery'));
+                wp_enqueue_script('bootstrap-jquery','//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js',array('jquery'),$this->ver,TRUE);
+                wp_enqueue_script('timepicker-jquery',$this->the_url.'lib/js/jquery.timepicker.min.js',array('jquery'),$this->ver,FALSE);
                 wp_enqueue_script( 'jquery-ui-datepicker' );
-                wp_enqueue_script('msdsocial-jquery',$this->the_url.'lib/js/plugin-jquery.js',array('jquery'));
+                wp_enqueue_script('msdsocial-jquery',$this->the_url.'lib/js/plugin-jquery.js',array('jquery','timepicker-jquery'),$this->ver,TRUE);
                 
             }
         }
@@ -67,8 +69,8 @@ class MSDSocial{
         function add_admin_styles() {
             global $current_screen;
             if($current_screen->id == 'settings_page_msdsocial-options'){
-                wp_register_style('bootstrap-style','//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css');
-                wp_register_style('font-awesome-style','//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css',array('bootstrap-style'));
+                wp_register_style('bootstrap-style','//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css');
+                wp_register_style('font-awesome-style','//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css',array('bootstrap-style'));
                 wp_register_style('timepicker-style',$this->the_url.'lib/css/jquery.timepicker.css');
                 wp_enqueue_style('font-awesome-style');
                 wp_enqueue_style('timepicker-style');
@@ -79,22 +81,22 @@ class MSDSocial{
 
 //contact information
 function get_bizname(){
-	$ret .= (get_option('msdsocial_biz_name')!='')?get_option('msdsocial_biz_name'):get_bloginfo('name');
-	return $ret;
+    $ret .= (get_option('msdsocial_biz_name')!='')?get_option('msdsocial_biz_name'):get_bloginfo('name');
+    return $ret;
 }
 function get_address(){
-	if((get_option('msdsocial_street')!='') || (get_option('msdsocial_city')!='') || (get_option('msdsocial_state')!='') || (get_option('msdsocial_zip')!='')) {
-		$ret = '<address itemscope itemtype="http://schema.org/LocalBusiness">';
-			$ret .= (get_option('msdsocial_street')!='')?'<span itemprop="streetAddress" class="msdsocial_street">'.get_option('msdsocial_street').'</span> ':'';
-			$ret .= (get_option('msdsocial_street2')!='')?'<span itemprop="streetAddress" class="msdsocial_street_2">'.get_option('msdsocial_street2').'</span> ':'';
-			$ret .= (get_option('msdsocial_city')!='')?'<span itemprop="addressLocality" class="msdsocial_city">'.get_option('msdsocial_city').'</span>, ':'';
-			$ret .= (get_option('msdsocial_state')!='')?'<span itemprop="addressRegion" class="msdsocial_state">'.get_option('msdsocial_state').'</span> ':'';
-			$ret .= (get_option('msdsocial_zip')!='')?'<span itemprop="postalCode" class="msdsocial_zip">'.get_option('msdsocial_zip').'</span> ':'';
-		$ret .= '</address>';
-		  return $ret;
-		} else {
-			return false;
-		} 
+    if((get_option('msdsocial_street')!='') || (get_option('msdsocial_city')!='') || (get_option('msdsocial_state')!='') || (get_option('msdsocial_zip')!='')) {
+        $ret = '<address itemscope itemtype="http://schema.org/LocalBusiness">';
+            $ret .= (get_option('msdsocial_street')!='')?'<span itemprop="streetAddress" class="msdsocial_street">'.get_option('msdsocial_street').'</span> ':'';
+            $ret .= (get_option('msdsocial_street2')!='')?'<span itemprop="streetAddress" class="msdsocial_street_2">'.get_option('msdsocial_street2').'</span> ':'';
+            $ret .= (get_option('msdsocial_city')!='')?'<span itemprop="addressLocality" class="msdsocial_city">'.get_option('msdsocial_city').'</span>, ':'';
+            $ret .= (get_option('msdsocial_state')!='')?'<span itemprop="addressRegion" class="msdsocial_state">'.get_option('msdsocial_state').'</span> ':'';
+            $ret .= (get_option('msdsocial_zip')!='')?'<span itemprop="postalCode" class="msdsocial_zip">'.get_option('msdsocial_zip').'</span> ':'';
+        $ret .= '</address>';
+          return $ret;
+        } else {
+            return false;
+        } 
 }
 function get_additional_locations(){
     $additional_locations = get_option(msdsocial_adtl_locations);
@@ -117,21 +119,21 @@ function get_additional_locations(){
 
 function get_digits($dowrap = TRUE,$sep = " | "){
         $sepsize = count($sep);
-		if((get_option('msdsocial_phone')!='') || (get_option('msdsocial_tollfree')!='') || (get_option('msdsocial_fax')!='')) {
-		    if((get_option('msdsocial_tracking_phone')!='')){
-		        if(wp_is_mobile()){
-		          $phone .= '<span itemprop="telephone" class="msdsocial_phone"><a href="tel:+1'.get_option('msdsocial_tracking_phone').'">'.get_option('msdsocial_tracking_phone').'</a></span> ';
-		        } else {
-		          $phone .= '<span itemprop="telephone" class="msdsocial_phone">'.get_option('msdsocial_tracking_phone').'</span> ';
-		        }
-		      $phone .= '<span  itemprop="telephone" class="msdsocial_phone" style="display: none;">'.get_option('msdsocial_phone').'</span> ';
-		    } else {
-		        if(wp_is_mobile()){
-		          $phone .= (get_option('msdsocial_phone')!='')?'<span itemprop="telephone" class="msdsocial_phone"><a href="tel:+1'.get_option('msdsocial_phone').'" itemprop="telephone">'.get_option('msdsocial_phone').'</a></span> ':'';
-		        } else {
+        if((get_option('msdsocial_phone')!='') || (get_option('msdsocial_tollfree')!='') || (get_option('msdsocial_fax')!='')) {
+            if((get_option('msdsocial_tracking_phone')!='')){
+                if(wp_is_mobile()){
+                  $phone .= '<span itemprop="telephone" class="msdsocial_phone"><a href="tel:+1'.get_option('msdsocial_tracking_phone').'">'.get_option('msdsocial_tracking_phone').'</a></span> ';
+                } else {
+                  $phone .= '<span itemprop="telephone" class="msdsocial_phone">'.get_option('msdsocial_tracking_phone').'</span> ';
+                }
+              $phone .= '<span  itemprop="telephone" class="msdsocial_phone" style="display: none;">'.get_option('msdsocial_phone').'</span> ';
+            } else {
+                if(wp_is_mobile()){
+                  $phone .= (get_option('msdsocial_phone')!='')?'<span itemprop="telephone" class="msdsocial_phone"><a href="tel:+1'.get_option('msdsocial_phone').'" itemprop="telephone">'.get_option('msdsocial_phone').'</a></span> ':'';
+                } else {
                   $phone .= (get_option('msdsocial_phone')!='')?'<span itemprop="telephone" class="msdsocial_phone">'.get_option('msdsocial_phone').'</span> ':'';
-		        }
-		    }
+                }
+            }
             if((get_option('msdsocial_tracking_tollfree')!='')){
                 if(wp_is_mobile()){
                   $tollfree .= '<span itemprop="telephone" class="msdsocial_tollfree"><a href="tel:+1'.get_option('msdsocial_tracking_tollfree').'">'.get_option('msdsocial_tracking_tollfree').'</a></span> ';
@@ -152,11 +154,11 @@ function get_digits($dowrap = TRUE,$sep = " | "){
             $ret .= $tollfree;
             $ret .= (!strpos($ret,$sep,$sepsize))?$sep:'';
             $ret .= $fax;
- 		  if($dowrap){$ret = '<address itemscope itemtype="http://schema.org/LocalBusiness">'.$ret.'</address>';}
-		return $ret;
-		} else {
-			return false;
-		} 
+          if($dowrap){$ret = '<address itemscope itemtype="http://schema.org/LocalBusiness">'.$ret.'</address>';}
+        return $ret;
+        } else {
+            return false;
+        } 
 }
 
 function get_location_digits($loc,$dowrap = TRUE,$sep = " | "){
@@ -294,13 +296,13 @@ function get_hours($atts = array()){
 }
 //create copyright message
 function copyright($address = TRUE){
-	if($address){
-		$ret .= $this->msdsocial_get_address();
-		$ret .= $this->msdsocial_get_digits();
-	}
-	$ret .= 'Copyright &copy;'.date('Y').' ';
-	$ret .= $this->msdsocial_get_bizname();
-	print $ret;
+    if($address){
+        $ret .= $this->msdsocial_get_address();
+        $ret .= $this->msdsocial_get_digits();
+    }
+    $ret .= 'Copyright &copy;'.date('Y').' ';
+    $ret .= $this->msdsocial_get_bizname();
+    print $ret;
 }
 
 
@@ -350,6 +352,15 @@ function social_media($atts = array()){
     if(get_option('msdsocial_contact_link')!=""){
         $ret .= '<a href="'.get_option('msdsocial_contact_link').'" class="fa fa-envelope" title="Contact Us" target="_blank"></a>';
     }    
+    if(get_option('msdsocial_show_blog')!=""){
+        if (get_option('show_on_front')=='page') {
+          $blog_page_id = get_option('page_for_posts');
+          $blog_url = get_permalink($blog_page_id);
+        } else {
+          $blog_url = get_option('home');
+        }
+        $ret .= '<a href="'.$blog_url.'" class="fa fa-newspaper-o" title="Blog" target="_blank"></a>';
+    }
     if(get_option('msdsocial_show_feed')!=""){
         $ret .= '<a href="'.get_bloginfo('rss2_url').'" class="fa fa-rss" title="RSS Feed" target="_blank"></a>';
     }
@@ -458,6 +469,10 @@ function setup_notification_bar(){
                 }
                 break;
             case 50:
+                global $notification_bar_html;
+                $notification_bar_html = $this->get_notification_bar();
+                return true;
+                break;
             default:
                 return false;
                 break;
@@ -466,30 +481,33 @@ function setup_notification_bar(){
 }
 
 function print_notification_bar(){
+    print $this->get_notification_bar();
+}
+function get_notification_bar(){
     $content = apply_filters('the_content',get_option('msdsocial_notification_content'));
-    print '<div class="notification-bar"><div class="wrap">' . $content . '</div></div>';
+    return '<div class="notification-bar"><div class="wrap">' . $content . '</div></div>';
 }
 
 function requireDir($dir){
-	$dh = @opendir($dir);
+    $dh = @opendir($dir);
 
-	if (!$dh) {
-		throw new Exception("Cannot open directory $dir");
-	} else {
-		while (($file = readdir($dh)) !== false) {
-			if ($file != '.' && $file != '..') {
-				$requiredFile = $dir . DIRECTORY_SEPARATOR . $file;
-				if ('.php' === substr($file, strlen($file) - 4)) {
-					require_once $requiredFile;
-				} elseif (is_dir($requiredFile)) {
-					requireDir($requiredFile);
-				}
-			}
-		}
-	closedir($dh);
-	}
-	unset($dh, $dir, $file, $requiredFile);
+    if (!$dh) {
+        throw new Exception("Cannot open directory $dir");
+    } else {
+        while (($file = readdir($dh)) !== false) {
+            if ($file != '.' && $file != '..') {
+                $requiredFile = $dir . DIRECTORY_SEPARATOR . $file;
+                if ('.php' === substr($file, strlen($file) - 4)) {
+                    require_once $requiredFile;
+                } elseif (is_dir($requiredFile)) {
+                    requireDir($requiredFile);
+                }
+            }
+        }
+    closedir($dh);
+    }
+    unset($dh, $dir, $file, $requiredFile);
 }
-	//end of class
+    //end of class
 }
 $msd_social = new MSDSocial();
