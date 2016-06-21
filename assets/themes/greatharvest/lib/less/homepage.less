@@ -429,7 +429,14 @@ html * .sectioned-page-wrapper{
         float: right;
         li, form li{
           margin: 0;
-          padding: 0;
+          padding: 0 1%;
+          background-color: transparent;
+          width: 48%;
+          float: left;
+          clear: none;
+          input.medium{
+            width: 100%;
+          }
           label{
             display: none;
           }
@@ -439,13 +446,13 @@ html * .sectioned-page-wrapper{
         width: 30%;
         float: right;    
         margin: -32px 0 0;
-        padding: 0 1%;
+        padding: 0 2% 0 0;
         input[type="submit"]{
           background-color: @red;
           border-radius: 0;
           margin: 0;
           padding: 3px 24px;
-          width: 100%;
+          width: 96%;
           &:hover{
             background-color: lighten(@red,10%);
           }
