@@ -8509,7 +8509,7 @@ body {
 .page-title-area h1 {
   font-size: 3.6rem;
   font-weight: 200;
-  padding: 0.5em;
+  padding: 0.5em 0.4em;
 }
 .msd-fa.block,
 .msd-icon.block {
