@@ -7185,6 +7185,16 @@ img#wpstats {
   background: none;
 }
 /* Shortcodes Ultimate */
+.entry-content .su-accordion .su-spoiler .su-spoiler-title {
+  font-family: "Fira Sans", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.625;
+}
+.entry-content .su-accordion .su-spoiler .su-spoiler-title .su-spoiler-icon {
+  color: #B7B7B7;
+}
 .entry-content .su-tabs {
   background: transparent;
   padding: 0;
