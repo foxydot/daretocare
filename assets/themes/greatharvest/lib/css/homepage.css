@@ -694,14 +694,8 @@ html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_h
   text-align: center;
 }
 html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading span.gform_description {
-  width: 40%;
-  float: left;
   color: #7F7F7F;
   font-size: 1.4rem;
-}
-html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body {
-  width: 59%;
-  float: right;
 }
 html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body li,
 html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_body form li {
@@ -721,17 +715,18 @@ html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_b
   display: none;
 }
 html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer {
-  width: 30%;
+  width: 51.5%;
   float: right;
   margin: -32px 0 0;
-  padding: 0 2% 0 0;
+  padding: 0 3% 0 0;
 }
 html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer input[type="submit"] {
   background-color: #cb333b;
   border-radius: 0;
   margin: 0;
-  padding: 3px 24px;
+  padding: 5px 24px;
   width: 96%;
+  border: 0;
 }
 html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_footer input[type="submit"]:hover {
   background-color: #d65b62;
