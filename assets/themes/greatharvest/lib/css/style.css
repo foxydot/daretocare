@@ -7231,6 +7231,9 @@ img#wpstats {
 .entry-content .su-tabs .su-tabs-panes {
   clear: both;
 }
+.entry-content .su-tabs .su-tabs-panes .su-tabs-pane {
+  font-size: 1.6rem;
+}
 /* Pre Header */
 .pre-header {
   background: #F2F7FA;
