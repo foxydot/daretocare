@@ -7138,10 +7138,11 @@ div.gform_wrapper form li {
   margin: 1.6rem 0 0;
 }
 div.gform_wrapper .gform_body .gfield {
-  padding: 0.5em;
+  padding: 0;
 }
-div.gform_wrapper .gform_body .gfield.even {
-  background-color: #F2F7FA;
+div.gform_wrapper .gform_body .gfield .gfield_label {
+  width: 48%;
+  float: left;
 }
 div.gform_wrapper .gform_body .gfield .ginput_container .gfield_radio li {
   display: inline-block;
@@ -7155,9 +7156,13 @@ div.gform_wrapper .gform_body .gfield .ginput_container .gfield_radio li label {
   float: none;
   font-weight: 400;
 }
+div.gform_wrapper .gform_footer {
+  text-align: center;
+}
 div.gform_wrapper .gform_footer input[type="submit"] {
   font-size: 14px;
   font-size: 1.4rem;
+  margin: 0 auto;
 }
 /* Jetpack
 --------------------------------------------- */
