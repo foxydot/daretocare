@@ -105,7 +105,12 @@ if (!class_exists('MSDCustomCPT')) {
         	requireDir(plugin_dir_path(__FILE__).'/lib/inc');
             //here are some examples to get started with
             if(class_exists('MSDCountyCPT')){
-                $this->project_class = new MSDCountyCPT();
+                $this->county_class = new MSDCountyCPT();
+                register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
+                register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
+            }
+            if(class_exists('MSDEventCPT')){
+                $this->event_class = new MSDEventCPT();
                 register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
                 register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
             }

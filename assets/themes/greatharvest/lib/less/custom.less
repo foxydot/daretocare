@@ -391,3 +391,65 @@ form{
     }
   }
 }
+.site-inner main.content article.page .entry-content{
+.msdlab_upcoming_events.grid{
+  .item{
+    a:link,a:visited{
+      position: relative;
+      width: 100%;
+      display: block;
+      color: @white;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      &:before{
+        content: "";
+        display: block;
+        padding-top: 90%; 
+      }
+      .wrapper,.overlay{
+        position:  absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+      .wrapper{
+        text-align: center;
+        border: 1px solid @red;
+        padding: 4em 0;
+        color: @white;
+        .event-title{
+          color: @white;
+        }
+        i{
+          display: block;
+          font-size: 2em;
+          border: 2px solid @white;
+          border-radius: 50%;
+          width: 1.2em;
+          height: 1.2em;
+          text-align: center;
+          margin: 0.4em auto;
+        }
+      }
+      .overlay{
+        opacity: 0.6;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition:    all 0.1s ease-in-out;
+        -ms-transition:     all 0.1s ease-in-out;
+        -o-transition:      all 0.1s ease-in-out;
+        transition:         all 0.1s ease-in-out;
+      }
+      &:hover{
+        .wrapper{
+          color: @white;
+        }
+        .overlay{
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+}

@@ -8781,6 +8781,71 @@ form p label {
     margin-top: 0;
   }
 }
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited {
+  position: relative;
+  width: 100%;
+  display: block;
+  color: #FFF;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link:before,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:before {
+  content: "";
+  display: block;
+  padding-top: 90%;
+}
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .wrapper,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .overlay,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .wrapper,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper {
+  text-align: center;
+  border: 1px solid #cb333b;
+  padding: 4em 0;
+  color: #FFF;
+}
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .wrapper .event-title,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper .event-title {
+  color: #FFF;
+}
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .wrapper i,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper i {
+  display: block;
+  font-size: 2em;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+  margin: 0.4em auto;
+}
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .overlay,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .overlay {
+  opacity: 0.6;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link:hover .wrapper,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:hover .wrapper {
+  color: #FFF;
+}
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link:hover .overlay,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:hover .overlay {
+  opacity: 0;
+}
 .nav-responsive ul,
 .nav-responsive li,
 .nav-responsive li a {
