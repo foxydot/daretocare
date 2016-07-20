@@ -27,6 +27,8 @@ if (!class_exists('MSDInvolvedShortcodes')) {
             $args = array(
                 'posts_per_page' => $number_posts,
                 'post_type' => $this->cpt,
+                'order_by' => 'id',
+                'order' => 'DEC',
             );
             //ts_data($args);
             $involveds = get_posts($args);
