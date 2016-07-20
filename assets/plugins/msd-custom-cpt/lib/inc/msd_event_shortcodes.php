@@ -123,16 +123,20 @@ if (!class_exists('MSDEventShortcodes')) {
                             $overlay_img = 'background-image: url('.$event->hover_img.');';
                         }
                         $bkg = get_post_thumbnail_id($event->ID)!=''?'style="background-image: url('.msdlab_get_thumbnail_url($event->ID,'small-square').')"':'';
+                        $wrapper = '<div class="wrapper">
+                            <div class="event-title">'.$event->title.'</div>
+                            <i class="fa fa-angle-right"></i>
+                        </div>';
                     $ret .= '
                     <div class="item item-'.$key.' grid-item col-md-6" id="event_'.$event->ID.'">
                         <a href="'.$event->url.'" class="link" '.$bkg.'>
-                        <div class="wrapper">
-                            <div class="event-title">'.$event->title.'</div>
-                            <i class="fa fa-angle-right"></i>
-                        </div>
-                        <div class="overlay" style="background-color: '.$event->hover.';'.$overlay_img.'">
+                        ';
+                    if($event->hover_img!=''){$ret .= $wrapper;}
+                    $ret .= '<div class="overlay" style="background-color: '.$event->hover.';'.$overlay_img.'">
                             &nbsp;
-                        </div>
+                        </div>';
+                    if($event->hover_img==''){$ret .= $wrapper;}
+                    $ret .= '
                         </a>
                    </div>';
                     endforeach;
