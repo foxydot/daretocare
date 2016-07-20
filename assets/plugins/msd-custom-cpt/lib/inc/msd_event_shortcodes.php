@@ -20,7 +20,7 @@ if (!class_exists('MSDEventShortcodes')) {
         function upcoming_events($atts){
             global $date_info;
             extract( shortcode_atts( array(
-                'months' => '12',
+                'months' => '24',
                 'number_posts' => 6,
                 'display' => 'grid',
             ), $atts ) );
