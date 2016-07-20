@@ -79,6 +79,7 @@ if (!class_exists('MSDEventShortcodes')) {
                 $events[$i]->event_date_end = $date_info->get_the_value('event_end_date')?$date_info->get_the_value('event_end_datestamp'):1609372800;
                 $events[$i]->url = $date_info->get_the_value('event_url');
                 $events[$i]->hover = $date_info->get_the_value('event_hover_color');
+                $events[$i]->hover_img = $date_info->get_the_value('event_hover_image');
                 $events[$i]->title = $up->post_title;
                 $i++;
             }
@@ -117,17 +118,20 @@ if (!class_exists('MSDEventShortcodes')) {
                     </div>';
                 else: //$display == carousel
                     foreach ( $events as $key => $event ):
-                        $hover = 
+                        $overlay_img = '';
+                        if($event->hover_img!=''){
+                            $overlay_img = 'background-image: url('.$event->hover_img.');';
+                        }
                         $bkg = get_post_thumbnail_id($event->ID)!=''?'style="background-image: url('.msdlab_get_thumbnail_url($event->ID,'small-square').')"':'';
                     $ret .= '
                     <div class="item item-'.$key.' grid-item col-md-6" id="event_'.$event->ID.'">
                         <a href="'.$event->url.'" class="link" '.$bkg.'>
-                        <div class="overlay" style="background-color: '.$event->hover.';">
-                            &nbsp;
-                        </div>
                         <div class="wrapper">
                             <div class="event-title">'.$event->title.'</div>
                             <i class="fa fa-angle-right"></i>
+                        </div>
+                        <div class="overlay" style="background-color: '.$event->hover.';'.$overlay_img.'">
+                            &nbsp;
                         </div>
                         </a>
                    </div>';
