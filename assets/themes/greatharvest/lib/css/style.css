@@ -8790,6 +8790,8 @@ form p label {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link:before,
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:before {
@@ -8832,6 +8834,8 @@ form p label {
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .overlay,
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .overlay {
   opacity: 0.6;
+  background-repeat: no-repeat;
+  background-position: center center;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
