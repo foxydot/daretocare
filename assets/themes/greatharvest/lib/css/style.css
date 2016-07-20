@@ -8833,14 +8833,14 @@ form p label {
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .overlay,
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .overlay {
-  opacity: 0.6;
+  opacity: 0.8;
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link:hover .wrapper,
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:hover .wrapper {
