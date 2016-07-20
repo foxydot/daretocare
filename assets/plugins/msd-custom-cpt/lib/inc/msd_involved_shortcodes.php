@@ -27,21 +27,6 @@ if (!class_exists('MSDInvolvedShortcodes')) {
             $args = array(
                 'posts_per_page' => $number_posts,
                 'post_type' => $this->cpt,
-                'meta_query' => array(
-                    array(
-                        'key' => '_date_involved_end_datestamp',
-                        'value' => time()-86400,
-                        'compare' => '>'
-                    ),
-                    array(
-                        'key' => '_date_involved_end_datestamp',
-                        'value' => mktime(0, 0, 0, date("m")+$months, date("d"), date("Y")),
-                        'compare' => '<'
-                    )
-                ),
-                'meta_key' => '_date_involved_end_datestamp',
-                'orderby'=>'meta_value_num',
-                'order'=>'ASC',
             );
             //ts_data($args);
             $involveds = get_posts($args);
@@ -126,12 +111,12 @@ if (!class_exists('MSDInvolvedShortcodes')) {
                     $ret .= '
                     <div class="item item-'.$key.' grid-item col-md-6" id="involved_'.$involved->ID.'">
                         <a href="'.$involved->url.'" class="link" '.$bkg.'>
+                        <div class="overlay" style="background-color: '.$involved->hover.';'.$overlay_img.'">
+                            &nbsp;
+                        </div>
                         <div class="wrapper">
                             <div class="involved-title">'.$involved->title.'</div>
                             <i class="fa fa-angle-right"></i>
-                        </div>
-                        <div class="overlay" style="background-color: '.$involved->hover.';'.$overlay_img.'">
-                            &nbsp;
                         </div>
                         </a>
                    </div>';

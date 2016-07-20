@@ -8782,7 +8782,9 @@ form p label {
   }
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link,
-.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited {
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:link,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited {
   position: relative;
   width: 100%;
   display: block;
@@ -8794,15 +8796,21 @@ form p label {
   margin-bottom: 1em;
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link:before,
-.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:before {
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:link:before,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:before,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited:before {
   content: "";
   display: block;
   padding-top: 90%;
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .wrapper,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:link .wrapper,
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited .wrapper,
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .overlay,
-.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .overlay {
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:link .overlay,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .overlay,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -8810,18 +8818,24 @@ form p label {
   right: 0;
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .wrapper,
-.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper {
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:link .wrapper,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited .wrapper {
   text-align: center;
   border: 1px solid #cb333b;
   padding: 4em 0;
   color: #FFF;
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .wrapper .event-title,
-.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper .event-title {
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:link .wrapper .event-title,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper .event-title,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited .wrapper .event-title {
   color: #FFF;
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .wrapper i,
-.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper i {
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:link .wrapper i,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .wrapper i,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited .wrapper i {
   display: block;
   font-size: 2em;
   border: 2px solid #FFF;
@@ -8832,7 +8846,9 @@ form p label {
   margin: 0.4em auto;
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link .overlay,
-.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .overlay {
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:link .overlay,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited .overlay,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited .overlay {
   opacity: 0.8;
   background-repeat: no-repeat;
   background-position: center center;
@@ -8843,11 +8859,15 @@ form p label {
   transition: all 0.5s ease-in-out;
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link:hover .wrapper,
-.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:hover .wrapper {
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:link:hover .wrapper,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:hover .wrapper,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited:hover .wrapper {
   color: #FFF;
 }
 .site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:link:hover .overlay,
-.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:hover .overlay {
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:link:hover .overlay,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_events.grid .item a:visited:hover .overlay,
+.site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited:hover .overlay {
   opacity: 0;
 }
 .nav-responsive ul,
