@@ -8225,7 +8225,7 @@ Site Footer
 }
 .site-footer .wrap .social,
 .site-footer .wrap .footer-menu {
-  display: block;
+  display: inline-block;
 }
 .site-footer .wrap p {
   margin-bottom: 0;
