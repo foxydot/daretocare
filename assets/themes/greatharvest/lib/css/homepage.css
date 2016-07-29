@@ -425,6 +425,9 @@ html * .sectioned-page-wrapper .section-news-events-facebook .section-body .sect
 html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content.column-1 p a.block:active:after {
   opacity: 1;
 }
+html * .sectioned-page-wrapper .section-news-events-facebook .section-body .section-content .cff {
+  max-height: 380px;
+}
 html * .sectioned-page-wrapper .section-county-info {
   background-color: #8DC63F;
 }

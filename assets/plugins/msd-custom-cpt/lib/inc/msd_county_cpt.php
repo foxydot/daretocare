@@ -399,6 +399,10 @@ if (!class_exists('MSDCountyCPT')) {
         
         function county_slider_shortcode_handler(){
             $counties = $this->get_all_counties();
+            foreach($counties AS $county){
+                ${$county->state}[] = $county;
+            }
+            $counties = array_merge($Kentucky,$Indiana);
             //the header
             $old_state = $hdr = '';
             $i=0;
@@ -501,7 +505,8 @@ if (!class_exists('MSDCountyCPT')) {
                 }
                 $i++;
             }
-            usort($posts,array(&$this,'sort_by_state'));
+           // usort($posts,array(&$this,'sort_by_state'));
+
             return $posts;
         }  
         
