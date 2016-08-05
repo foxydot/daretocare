@@ -8642,12 +8642,16 @@ body {
   width: 79%;
   margin-right: 1%;
 }
+.sectioned-page-wrapper .wpgmp_map_container .visible_search .search .wpgmp_search_input_visible {
+  width: 82%;
+}
 .sectioned-page-wrapper .wpgmp_map_container .visible_search .search .wpgmp_search_input_submit {
   width: 15%;
   background-color: #8DC63F;
   position: absolute;
   top: 0;
   right: 15px;
+  margin: 0;
 }
 .sectioned-page-wrapper .wpgmp_map_container .visible_search .search .wpgmp_search_input_submit:hover {
   background-color: #72a230;
