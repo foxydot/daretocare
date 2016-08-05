@@ -7,7 +7,7 @@ function msdlab_make_it_homepage(){
         //remove_action('genesis_entry_header', 'genesis_do_post_title');
         add_action('genesis_after_header','msdlab_hero');
         remove_action('genesis_before_footer','genesis_footer_widget_areas');
-        //add_action('genesis_before_footer','msdlab_homepage_widgets',-4);
+        add_action('genesis_before_footer','msdlab_homepage_widgets',-4);
         add_action('genesis_before_footer','genesis_footer_widget_areas');
     }
 }
@@ -572,3 +572,9 @@ function msdlab_clear_text_markup($markup){
         ts_data($markup);
     //}
 }
+
+function make_posts_page_private() {
+    if ( (is_home() || (is_post() && is_single()) || is_private()) && !is_user_logged_in() )
+    exit( wp_redirect( home_url( '/private' ) ) );
+}
+add_action( 'template_redirect', 'make_posts_page_private' );
