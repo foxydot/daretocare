@@ -26,6 +26,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 function msd_inline_login($atts){
 	extract( shortcode_atts( array(
+	    'name' => 'partner',
 		'echo' => false,
         'redirect' => site_url( $_SERVER['REQUEST_URI'] ), 
         'form_id' => 'loginform',
@@ -59,12 +60,20 @@ function msd_inline_login($atts){
 	);
 	global $current_user;
 	if(is_user_logged_in()){
-		$ret = '<div>
-		<p>
-		<a href="https://dtc.daretocare.org/PrimariusWW/login.aspx" target="_blank" id="agency-button-2" class="button agency-button">Click to Proceed to PWW</a>
-		</p>
-		</div>';
-        $ret .= wp_nav_menu(array('echo' => false, 'menu' => 'agencybloglink'));
+	    if($name == 'partner'){
+    		$ret = '<div>
+    		<p>
+    		<a href="https://dtc.daretocare.org/PrimariusWW/login.aspx" target="_blank" id="agency-button-2" class="button agency-button">Click to Proceed to PWW</a>
+    		</p>
+    		</div>';
+            $ret .= wp_nav_menu(array('echo' => false, 'menu' => 'agencybloglink'));
+        } elseif($name == 'kitchen'){
+            $ret = '<div>
+            <p>
+            <a href="/partner-agencies/community-kitchen-partner-info/" target="_blank" id="agency-button-3" class="button agency-button">Community Kitchen Info</a>
+            </p>
+            </div>';
+        }
 	} else {
 		$ret = '<div>'.wp_login_form($args).'</div>';
 	}
