@@ -26,7 +26,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 function msd_inline_blog($atts){
 	if(!is_user_logged_in()){
-		return;
+		return " Partner Agencies please log in to view.";
 	}
 	extract( shortcode_atts( array(
 		'title' => 'Blog',

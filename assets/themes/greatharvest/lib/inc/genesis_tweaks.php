@@ -49,7 +49,7 @@ add_filter('layerslider_slider_markup','msdlab_clear_text_markup');
 
 /*** SIDEBARS ***/
 add_action('genesis_before', 'msdlab_ro_layout_logic'); //This ensures that the primary sidebar is always to the left.
-add_action('after_setup_theme','msdlab_add_extra_theme_sidebars', 4); //creates widget areas for a hero and flexible widget area
+//add_action('after_setup_theme','msdlab_add_extra_theme_sidebars', 4); //creates widget areas for a hero and flexible widget area
 add_filter('widget_text', 'do_shortcode');//shortcodes in widgets
 
 /*** CONTENT ***/
