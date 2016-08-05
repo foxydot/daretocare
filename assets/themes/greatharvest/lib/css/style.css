@@ -8748,7 +8748,7 @@ body {
 .sectioned-page-wrapper .wpgmp_map_container .iwtext.categories img {
   display: inline-block;
   height: 2rem;
-  width: 2rem;
+  width: auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
