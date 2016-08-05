@@ -574,7 +574,7 @@ function msdlab_clear_text_markup($markup){
 }
 
 function make_posts_page_private() {
-    if ( (is_home() || (is_post() && is_single()) || is_private()) && !is_user_logged_in() )
+    if ( (is_home() || (is_cpt('post') && is_single())) && !is_user_logged_in() )
     exit( wp_redirect( home_url( '/private' ) ) );
 }
 add_action( 'template_redirect', 'make_posts_page_private' );
