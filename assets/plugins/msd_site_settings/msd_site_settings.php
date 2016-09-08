@@ -2,7 +2,7 @@
 /*
 Plugin Name: MSD Site Settings
 Description: Provides settings panel for several social/address options and widgets/shortcodes/functions for display.
-Version: 0.9.6
+Version: 0.9.9
 Author: Catherine M OBrien Sandrick (CMOS)
 Author URI: http://msdlab.com/biological-assets/catherine-obrien-sandrick/
 GitHub Plugin URI: https://github.com/msdlab/msd_site_settings
@@ -48,6 +48,7 @@ class MSDSocial{
         
         add_shortcode('msd-address',array(&$this,'get_address'));
         add_shortcode('msd-additional-locations',array(&$this,'get_additional_locations'));
+        add_shortcode('msd-all-locations',array(&$this,'get_all_locations'));
         add_shortcode('msd-bizname',array(&$this,'get_bizname'));
         add_shortcode('msd-copyright',array(&$this,'get_copyright'));
         add_shortcode('msd-digits',array(&$this,'get_digits'));
@@ -81,7 +82,7 @@ class MSDSocial{
 
 //contact information
 function get_bizname(){
-    $ret .= (get_option('msdsocial_biz_name')!='')?get_option('msdsocial_biz_name'):get_bloginfo('name');
+    $ret .= (get_option('msdsocial_biz_name')!='')?stripslashes(get_option('msdsocial_biz_name')):stripslashes(get_bloginfo('name'));
     return $ret;
 }
 function get_address(){
@@ -115,6 +116,43 @@ function get_additional_locations(){
         }
     }
     return $ret;
+}
+function get_all_locations(){
+    $primary_location = array(
+        array(
+            'location_name' => $this->get_bizname(),
+            'street' => get_option('msdsocial_street'),
+            'street2' => get_option('msdsocial_street2'),
+            'city' => get_option('msdsocial_city'),
+            'state' => get_option('msdsocial_state'),
+            'zip' => get_option('msdsocial_zip'),
+            'phone' => get_option('msdsocial_phone'),
+            'tracking_phone' => get_option('msdsocial_tracking_phone'),
+            'fax' => get_option('msdsocial_fax'),
+            'email' => get_option('msdsocial_email'),
+            'lat' => get_option('msdsocial_lat'),
+            'lng' => get_option('msdsocial_lng'),
+        )
+    );
+    $additional_locations = get_option(msdsocial_adtl_locations);
+    $locations = array_merge($primary_location,$additional_locations);
+    $ret = '';
+    foreach($locations AS $loc){
+        if(($loc[street]!='') || ($loc[city]!='') || ($loc[state]!='') || ($loc[zip]!='') || ($loc[phone]!='')) {
+            $ret .= '<li>
+            <address itemscope itemtype="http://schema.org/LocalBusiness">';
+                $ret .= ($loc[location_name]!='')?'<span itemprop="name" class="msdsocial_location_name">'.$loc[location_name].'</span> ':'';
+                $ret .= ($loc[street]!='')?'<span itemprop="streetAddress" class="msdsocial_street">'.$loc[street].'</span> ':'';
+                $ret .= ($loc[street2]!='')?'<span itemprop="streetAddress" class="msdsocial_street_2">'.$loc[street2].'</span> ':'';
+                $ret .= ($loc[city]!='')?'<span itemprop="addressLocality" class="msdsocial_city">'.$loc[city].'</span>, ':'';
+                $ret .= ($loc[state]!='')?'<span itemprop="addressRegion" class="msdsocial_state">'.$loc[state].'</span> ':'';
+                $ret .= ($loc[zip]!='')?'<span itemprop="postalCode" class="msdsocial_zip">'.$loc[zip].'</span> ':'';
+                $ret .= $this->get_location_digits($loc,FALSE,'');
+            $ret .= '</address>
+            </li>';
+        }
+    }
+    return '<ul class="all-locations">'.$ret.'</ul>';
 }
 
 function get_digits($dowrap = TRUE,$sep = " | "){
@@ -196,7 +234,7 @@ function get_location_digits($loc,$dowrap = TRUE,$sep = " | "){
             $ret = $phone;
             $ret .= ($phone!='' && $tollfree!='')?$sep:'';
             $ret .= $tollfree;
-            $ret .= (!strpos($ret,$sep,$sepsize))?$sep:'';
+            $ret .= (!strpos($ret,$sep,$sepsize))?$sep:''; //TODO:Why error here?
             $ret .= $fax;
           if($dowrap){$ret = '<address itemscope itemtype="http://schema.org/LocalBusiness">'.$ret.'</address>';}
         return $ret;
@@ -484,7 +522,7 @@ function print_notification_bar(){
     print $this->get_notification_bar();
 }
 function get_notification_bar(){
-    $content = apply_filters('the_content',get_option('msdsocial_notification_content'));
+    $content = apply_filters('the_content',stripcslashes(get_option('msdsocial_notification_content')));
     return '<div class="notification-bar"><div class="wrap">' . $content . '</div></div>';
 }
 
