@@ -8692,9 +8692,6 @@ body {
   float: none;
   width: 100%;
 }
-.sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_tab_item:first-child .wpgmp_specific_category_item {
-  display: none;
-}
 .sectioned-page-wrapper .wpgmp_map_container .wpgmp_map .wpgmp_tabs_container .wpgmp_tab_item .wpgmp_cat_title {
   cursor: default;
 }
