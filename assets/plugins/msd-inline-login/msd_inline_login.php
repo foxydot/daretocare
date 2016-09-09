@@ -61,24 +61,29 @@ function msd_inline_login($atts){
 	global $current_user;
 	if(is_user_logged_in()){
 	    if($name == 'partner'){
-    		$ret = '<div>
+    		$ret = '<div class="partner-links">
             <p>
             <a href="https://dtc.daretocare.org/PrimariusWW/login.aspx" target="_blank" id="agency-button-2" class="button agency-button">Click to Proceed to PWW</a>
             </p>
-            </div><div>
             <p>
             <a href="/partner-agencies/agency-info/" id="agency-button-2" class="button agency-button">Agency Info</a>
             </p>
             </div>';
         } elseif($name == 'kitchen'){
-            $ret = '<div>
+            $ret = '<div class="kitchen-links">
             <p>
             <a href="/partner-agencies/community-kitchen-partner-info/" id="agency-button-3" class="button agency-button">Community Kitchen Info</a>
             </p>
             </div>';
+          $ret = '<div class="kitchen-form">'.wp_login_form($args).'</div>';
+            
         }
 	} else {
-		$ret = '<div>'.wp_login_form($args).'</div>';
+        if($name == 'partner'){
+		  $ret = '<div class="partner-form">'.wp_login_form($args).'</div>';
+        } elseif($name == 'kitchen'){
+          $ret = '<div class="kitchen-form">'.wp_login_form($args).'</div>';
+        }
 	}
 	return $ret;
 }

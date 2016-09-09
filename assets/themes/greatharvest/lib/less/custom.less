@@ -365,8 +365,24 @@ form{
 }
 
 .sidebar{
-  #loginform{
+  #loginform,.partner-links{
     margin-bottom: 6em;
+  }
+  .kitchen-form{
+    position: relative;
+    &:after{
+      background-color: fade(@white,60%);
+      content: "Coming Soon!";
+      color: @green;
+      line-height: 1;
+      text-align: center;
+      font-size: 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
   }
 }
 

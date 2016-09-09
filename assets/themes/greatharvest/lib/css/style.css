@@ -8769,8 +8769,25 @@ form p {
 form p label {
   margin-bottom: 0;
 }
-.sidebar #loginform {
+.sidebar #loginform,
+.sidebar .partner-links {
   margin-bottom: 6em;
+}
+.sidebar .kitchen-form {
+  position: relative;
+}
+.sidebar .kitchen-form:after {
+  background-color: rgba(255, 255, 255, 0.6);
+  content: "Coming Soon!";
+  color: #8DC63F;
+  line-height: 1;
+  text-align: center;
+  font-size: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 @media only screen and (max-width: 800px) {
   .sectioned-page-wrapper .wpgmp_map_container .wpgmp_map {
