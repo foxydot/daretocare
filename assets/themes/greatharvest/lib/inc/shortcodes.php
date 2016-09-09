@@ -196,3 +196,97 @@ function how_to_help_shortcode_handler($atts, $content){
     </script>';
     return $ret;
 }   
+            
+add_shortcode('block','block_link_style_handler');
+function block_link_style_handler($atts){
+    extract( shortcode_atts( array(
+    'title' => '',
+    'color' => 'white',
+    'image' => FALSE,
+    'url' => FALSE,
+    'height' => 214,
+    'width' => 214,
+    'class' => '',
+    'button' => '<i class="fa fa-angle-right"></i>',
+    ), $atts ) );
+    $colors = array(
+        'red' => '#a02816',
+        'green' => '#8dc63f',
+        'orange' => '#f16528',
+        'white' => '#ffffff',
+    );
+    $rand = uniqid('block_');
+    $style = '<style type="text/css">
+    .'.$rand.'{
+        border: 1px solid #a02816;
+        color: #fff;
+        display: table;
+        line-height: 1.2;
+        margin: 0.3em;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        float: left;
+    }
+    .'.$rand.':hover{
+        text-decoration: none;
+        }
+    .'.$rand.':before,
+    .'.$rand.':after{
+        content: " ";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+      -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition:    all 0.1s ease-in-out;
+      -ms-transition:     all 0.1s ease-in-out;
+      -o-transition:      all 0.1s ease-in-out;
+      transition:         all 0.1s ease-in-out;
+        width: 100%;
+    }
+    .'.$rand.':before{
+        background-color: '.$colors[$color].';
+        opacity: 1;
+        z-index: -2;
+    }
+    .'.$rand.':hover:before{
+        opacity: 0;
+    }
+    
+    .'.$rand.':after{
+        background-image: url('.$image.');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.6;
+        z-index: -1;
+    }
+    .'.$rand.':hover:after{
+        opacity: 1;
+    }
+
+    .'.$rand.' span{
+        color: #ffffff;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .'.$rand.' span i {
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: block;
+        font-size: 2em;
+        height: 1.2em;
+        margin: 0.4em auto;
+        text-align: center;
+        width: 1.2em;
+    }
+    </style>';
+    $ret = '<a class="block '.$color.' '.$class.' '.$rand.'" href="'.$url.'" style="height: '.$height.'px;width: '.$width.'px;"><span>'.$title.$button.'</span></a>';
+    if(!strstr($class,'latest')){
+        $ret = $style.$ret;
+    }
+    return $ret;
+}

@@ -65,9 +65,10 @@ html * .sectioned-page-wrapper{
       .section-content.column-1{
         p{
           margin: 0 auto;
+        }
           a.block{
             position: relative;
-            display: inline-block;
+            display: inline-table;
             color: @white;
             border: 1px solid @dkred;
             margin: 0.3em;
@@ -99,40 +100,6 @@ html * .sectioned-page-wrapper{
               background-position: center center;
               background-size: cover;
             }
-            &.news,&.event{
-              padding: 4em;
-              height: 13.5em;
-              width: 13.5em;
-            }
-            &.news{
-              &:before{
-                background-color: @dkred;
-              }
-              &:after{
-                background-image: url(../img/news.jpg);
-              }
-            }
-            &.event{
-              &:before{
-                background-color: @green;
-              }
-              &:after{
-                background-image: url(../img/event.jpg);
-              }
-            }
-            &.attend,&.latest{
-              padding: 1.5em;
-              height: 9em;
-              width: 9em;
-            }
-            &.attend{
-              &:before{
-                background-color: @orange;
-              }
-              &:after{
-                background-image: url(../img/attendAnEvent.jpg);
-              }
-            }
             &.latest{
               padding-left: 2em;
               padding-right: 2em;
@@ -162,7 +129,6 @@ html * .sectioned-page-wrapper{
               }
             }
           }
-        }
       }
       .section-content{
         .cff{
