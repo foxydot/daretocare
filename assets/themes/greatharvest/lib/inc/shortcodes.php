@@ -284,7 +284,8 @@ function block_link_style_handler($atts){
         width: 1.2em;
     }
     </style>';
-    $ret = '<a class="block '.$color.' '.$class.' '.$rand.'" href="'.$url.'" style="height: '.$height.'px;width: '.$width.'px;"><span>'.$title.$button.'</span></a>';
+    $url = $url?'href="'.$url.'"':'';
+    $ret = '<a class="block '.$color.' '.$class.' '.$rand.'" '.$url.' style="height: '.$height.'px;width: '.$width.'px;"><span>'.$title.$button.'</span></a>';
     if(!strstr($class,'latest')){
         $ret = $style.$ret;
     }
