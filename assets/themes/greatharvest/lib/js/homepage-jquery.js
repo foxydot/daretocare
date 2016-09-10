@@ -4,5 +4,13 @@ jQuery(document).ready(function($) {
     var cols = 12/numwidgets;
     $('#homepage-widgets section.widget').addClass('col-sm-'+cols);
     $('#homepage-widgets section.widget').addClass('col-xs-12');
-    
+    if($( window ).width() < 450){
+        $('a.block').each(function () {
+            var h = $(this).innerHeight();
+            var w = $(this).innerWidth();
+            var height = (h/450)*$( window ).width();
+            var width = (w/450)*100;
+            $(this).css('height',height + 'px').css('width',width + '%');
+        });
+    }
 });

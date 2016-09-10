@@ -559,6 +559,9 @@ html * .sectioned-page-wrapper .section-county-info #counties .carousel-inner .i
   border: 1px solid #FFF;
   border-radius: 50%;
 }
+html * .sectioned-page-wrapper .section-dare-to-care-101 {
+  width: auto;
+}
 html * .sectioned-page-wrapper .section-dare-to-care-101 blockquote {
   border-top: 2px #8DC63F solid;
   border-bottom: 2px #8DC63F solid;
@@ -665,6 +668,16 @@ html * .sectioned-page-wrapper .section-how-to-help .section-body .wrap #help ol
   color: #FFF;
   text-decoration: none;
 }
+html * .sectioned-page-wrapper .section-stay-in-touch {
+  width: auto;
+}
+html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
 html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_heading {
   margin: 0;
 }
@@ -727,5 +740,14 @@ html * .sectioned-page-wrapper .section-stay-in-touch div.gform_wrapper .gform_f
 @media only screen and (max-width: 550px) {
   .sectioned-page-wrapper {
     font-size: 3vw;
+  }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  iframe {
+    width: 96% !important;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

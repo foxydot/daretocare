@@ -207,7 +207,7 @@ function block_link_style_handler($atts){
     'height' => 214,
     'width' => 214,
     'class' => '',
-    'button' => '<i class="fa fa-angle-right"></i>',
+    'button' => TRUE,
     ), $atts ) );
     $colors = array(
         'red' => '#a02816',
@@ -284,6 +284,7 @@ function block_link_style_handler($atts){
         width: 1.2em;
     }
     </style>';
+    $button = $button?'<i class="fa fa-angle-right"></i>':'';
     $url = $url?'href="'.$url.'"':'';
     $ret = '<a class="block '.$color.' '.$class.' '.$rand.'" '.$url.' style="height: '.$height.'px;width: '.$width.'px;"><span>'.$title.$button.'</span></a>';
     if(!strstr($class,'latest')){
