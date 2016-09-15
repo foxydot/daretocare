@@ -86,12 +86,12 @@ function msdlab_bootstrap_sidebar_alt( $attributes ){
     switch($layout){
         case 'content-sidebar':
         case 'sidebar-content':
-            $attributes['class'] .= ' row col-md-4 hidden-sm hidden-xs';
+            $attributes['class'] .= ' row col-md-4 col-12sm';
             break;
         case 'content-sidebar-sidebar':
         case 'sidebar-sidebar-content':
         case 'sidebar-content-sidebar':
-            $attributes['class'] .= ' row col-md-4 hidden-sm hidden-xs';
+            $attributes['class'] .= ' row col-md-4 col-12sm';
             break;
         case 'full-width-content':
             $attributes['class'] .= ' hidden';
