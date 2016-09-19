@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
     var cols = 12/numwidgets;
     $('#homepage-widgets section.widget').addClass('col-sm-'+cols);
     $('#homepage-widgets section.widget').addClass('col-xs-12');
-    if($( window ).width() < 450){
+    if($( window ).width() < 992){
         $('a.block').each(function () {
             var h = $(this).innerHeight();
             var w = $(this).innerWidth();
