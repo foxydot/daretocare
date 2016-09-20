@@ -128,7 +128,7 @@ if (!class_exists('MSDEventShortcodes')) {
                             <i class="fa fa-angle-right"></i>
                         </div>';
                     $ret .= '
-                    <div class="item item-'.$key.' grid-item col-md-6" id="event_'.$event->ID.'">
+                    <div class="item item-'.$key.' grid-item col-sm-6" id="event_'.$event->ID.'">
                         <a href="'.$event->url.'" class="link" '.$bkg.'>
                         ';
                     if($event->hover_img!=''){$ret .= $wrapper;}

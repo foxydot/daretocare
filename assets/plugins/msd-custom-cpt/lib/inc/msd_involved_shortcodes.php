@@ -111,7 +111,7 @@ if (!class_exists('MSDInvolvedShortcodes')) {
                         }
                         $bkg = get_post_thumbnail_id($involved->ID)!=''?'style="background-image: url('.msdlab_get_thumbnail_url($involved->ID,'small-square').')"':'';
                     $ret .= '
-                    <div class="item item-'.$key.' grid-item col-md-6" id="involved_'.$involved->ID.'">
+                    <div class="item item-'.$key.' grid-item col-sm-6" id="involved_'.$involved->ID.'">
                         <a href="'.$involved->url.'" class="link" '.$bkg.'>
                         <div class="overlay" style="background-color: '.$involved->hover.';'.$overlay_img.'">
                             &nbsp;
