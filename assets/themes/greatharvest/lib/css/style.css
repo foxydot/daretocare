@@ -7237,6 +7237,11 @@ img#wpstats {
 .entry-content .su-tabs .su-tabs-panes .su-tabs-pane {
   font-size: 1.6rem;
 }
+@media only screen and (max-width: 479px) {
+  .entry-content .su-tabs .su-tabs-nav > span {
+    font-size: 4vw;
+  }
+}
 /* Pre Header */
 .pre-header {
   background: #F2F7FA;
@@ -8410,6 +8415,15 @@ Site Footer
 .sectioned-page-wrapper .section.title-bar.arrow-down .section-body {
   padding-top: 3rem;
 }
+@media only screen and (max-width: 992px) {
+  .sectioned-page-wrapper .section .section-body .wrap {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .sectioned-page-wrapper .section .section-body .wrap ul {
+    margin-left: 2em;
+  }
+}
 @media only screen and (max-width: 767px) {
   .sectioned-page-wrapper .section.summary .section-body .bkg-white .section-title h3 {
     text-align: left;
@@ -8940,6 +8954,9 @@ form p label {
     float: none;
     background-position: center center;
   }
+  .header-image .site-header .title-area .site-description {
+    background-position: center center;
+  }
   .header-image .site-header .nav-primary {
     margin: 0 auto;
     float: none;
@@ -8989,9 +9006,8 @@ form p label {
     text-decoration: none;
   }
   .nav-responsive a#pull > strong {
-    color: #fff;
+    color: #353535;
     text-decoration: none;
-    font-size: 1.2rem;
   }
   .nav-responsive a#pull ul#mobile_menu {
     margin-top: 14px;
@@ -9004,12 +9020,11 @@ form p label {
   }
   .nav-responsive a#pull ul#mobile_menu li a {
     background: #b0d87a;
-    color: #FFF;
+    color: #353535;
     display: block;
     width: 100%;
     padding: 0.5em;
     border-bottom: 1px solid #959595;
-    font-size: 1.2rem;
   }
   .nav-responsive a#pull ul#mobile_menu li a .toggle-switch {
     right: 15px;
@@ -9055,7 +9070,7 @@ form p label {
     font-family: 'FontAwesome';
     font-size: 2.2rem;
     text-indent: 0;
-    color: #b0d87a;
+    color: #353535;
     text-align: center;
     width: 30px;
     height: 30px;
