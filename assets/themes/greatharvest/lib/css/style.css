@@ -8616,6 +8616,10 @@ body {
   font-weight: 400;
   margin-top: 1em;
 }
+.single-county article.county .entry-content .pie-charts > div,
+.single-county article.county .entry-content .distribution-charts > div {
+  margin-bottom: 1em;
+}
 .single-county article.county .entry-content .pie-charts .data strong,
 .single-county article.county .entry-content .distribution-charts .data strong {
   font-size: 2.5em;
