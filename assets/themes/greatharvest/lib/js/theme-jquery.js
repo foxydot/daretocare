@@ -45,10 +45,7 @@ jQuery(document).ready(function($) {
 	
 	
     $('a').not('[href*="mailto:"]').each(function () {
-        var domaininfo = window.location.hostname.split('.');
-        domaininfo.reverse();
-        var domaintld = domaininfo[1] + '.' + domaininfo[0];
-        var isInternalLink = new RegExp('/' + domaintld + '/');
+        var isInternalLink = new RegExp('/' + window.location.hostname + '/');
         if ( ! isInternalLink.test(this.href)) {
             $(this).attr('target', '_blank');
         }
