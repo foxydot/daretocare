@@ -36,6 +36,13 @@
         </div>
         <div class="row">
             <div class="cell">
+                <?php $metabox->the_field('involved_order'); ?>
+                <label>Order</label>
+                <div class="input_container half"><input type="number" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell">
                 <?php $metabox->the_field('involved_start_datestamp'); ?>
                 <input type="hidden" class="start_datestamp datestamp" value="<?php $metabox->the_value(); ?>" id="<?php $metabox->the_name(); ?>" name="<?php $metabox->the_name(); ?>">
                 <label>Event Start</label>
