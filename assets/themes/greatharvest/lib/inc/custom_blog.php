@@ -1,5 +1,5 @@
 <?php
-add_action('genesis_before_loop','msdlab_replace_generic_loop');
+//add_action('genesis_before_loop','msdlab_replace_generic_loop');
 
 function msdlab_replace_generic_loop(){
     if(is_home()){
