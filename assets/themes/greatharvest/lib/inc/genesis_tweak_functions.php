@@ -301,7 +301,7 @@ function msdlab_breadcrumb_home_link($crumb){
 }
 
 function sp_post_info_filter($post_info) {
-    $post_info = 'Posted [post_date]';
+    $post_info = 'By: [post_author] | [post_categories sep=", " before="Category: "][post_date format="jSMy"]';
     return $post_info;
 }
 function sp_read_more_link() {

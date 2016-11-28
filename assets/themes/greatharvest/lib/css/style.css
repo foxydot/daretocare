@@ -8923,6 +8923,44 @@ form p label {
 .site-inner main.content article.page .entry-content .msdlab_upcoming_involveds.grid .item a:visited:hover .overlay {
   opacity: 0;
 }
+.blog main.content .su-accordion .su-spoiler .su-spoiler-content {
+  background: rgba(149, 149, 149, 0.15);
+  padding: 1em;
+}
+.blog main.content .su-accordion .su-spoiler .su-spoiler-content article .entry-header .entry-title,
+.blog main.content .su-accordion .su-spoiler .su-spoiler-content article .entry-header .entry-subtitle {
+  display: inline;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 0;
+  border: 0;
+  line-height: 1.25;
+}
+.blog main.content .su-accordion .su-spoiler .su-spoiler-content article .entry-header .entry-meta {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+.blog main.content .su-accordion .su-spoiler .su-spoiler-content article .entry-header .entry-meta span {
+  display: inline;
+}
+.blog main.content .su-accordion .su-spoiler .su-spoiler-content article .entry-header .entry-meta time {
+  position: absolute;
+  top: -0.5em;
+  right: 0;
+  padding: 0.5em;
+  background: #FFF;
+}
+.blog main.content .su-accordion .su-spoiler .su-spoiler-content article .entry-header .entry-meta a {
+  color: #F16528;
+}
+.blog main.content .su-accordion .su-spoiler .su-spoiler-content article .entry-content {
+  background: #FFF;
+  padding: 1em;
+}
+.blog main.content .su-accordion .su-spoiler.su-spoiler-closed .su-spoiler-content {
+  padding: 0;
+}
 .nav-responsive ul,
 .nav-responsive li,
 .nav-responsive li a {

@@ -484,3 +484,57 @@ form{
   }
 }
 }
+.blog{
+  main.content{
+    .su-accordion{
+      .su-spoiler{
+        .su-spoiler-title{}
+        .su-spoiler-content{
+          background: fade(@ltgrey,15%);
+          padding: 1em;
+          article{
+            .entry-header{
+              .entry-title,.entry-subtitle{
+                display: inline;
+                font-size: 1.4em;
+                font-weight: 600;
+                margin: 0;
+                border: 0;
+                line-height: 1.25;
+              }
+              .entry-meta{
+                font-size: 0.8em;
+                margin-bottom: 0.5em;
+                position: relative;
+                span{
+                  display: inline;
+                }
+                time{
+                  position: absolute;
+                  top: -0.5em;
+                  right: 0;
+                  padding: 0.5em;
+                  background: @white;
+                }
+                a{
+                  color: @orange;
+                }
+              }
+            }
+            .entry-content{
+              background: @white;
+              padding: 1em;
+            }
+            .entry-footer{}
+          }
+        }
+      }
+      .su-spoiler.su-spoiler-closed{
+        .su-spoiler-title{}
+        .su-spoiler-content{
+          padding: 0;
+        }
+      }
+    }
+  }
+}

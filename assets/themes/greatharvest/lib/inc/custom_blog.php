@@ -1,5 +1,5 @@
 <?php
-//add_action('genesis_before_loop','msdlab_replace_generic_loop');
+add_action('genesis_before_loop','msdlab_replace_generic_loop');
 
 function msdlab_replace_generic_loop(){
     if(is_home()){
@@ -14,7 +14,7 @@ function msdlab_custom_loop_by_cat(){
     
     $cats = get_categories(array(
     'orderby' => 'name',
-    'parent'  => 0
+    'parent'  => 11,//0
     ));
     if(class_exists('Su_Shortcodes')){
         print '<div class="su-accordion">';
