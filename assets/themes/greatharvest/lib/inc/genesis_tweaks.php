@@ -68,6 +68,8 @@ add_action('genesis_after_header', 'genesis_do_breadcrumbs'); //to outside of th
 
 add_filter('excerpt_more', 'sp_read_more_link');
 add_filter( 'the_content_more_link', 'sp_read_more_link' );
+remove_filter('get_the_excerpt','wp_trim_excerpt');
+add_filter('get_the_excerpt','msdlab_trim_excerpt');
 
 
 //remove_action( 'genesis_entry_header', 'genesis_post_info', 12 ); //remove the info (date, posted by,etc.)

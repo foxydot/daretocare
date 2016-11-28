@@ -579,3 +579,36 @@ function make_posts_page_private() {
     exit( wp_redirect( home_url( '/private' ) ) );
 }
 add_action( 'template_redirect', 'make_posts_page_private' );
+
+function msdlab_trim_excerpt($text = '') {
+        global $post;
+        if ( '' == $text ) {
+                $text = get_the_content('');
+                $text = apply_filters('the_content', $text);
+                $text = str_replace('\]\]\>', ']]>', $text);
+                $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+                $text = strip_tags($text, '<a><img>');
+                $num_words = apply_filters( 'excerpt_length', 55 );
+                $more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
+                
+                if ( strpos( _x( 'words', 'Word count type. Do not translate!' ), 'characters' ) === 0 && preg_match( '/^utf\-?8$/i', get_option( 'blog_charset' ) ) ) {
+                    $text = trim( preg_replace( "/[\n\r\t ]+/", ' ', $text ), ' ' );
+                    preg_match_all( '/./u', $text, $words_array );
+                    $words_array = array_slice( $words_array[0], 0, $num_words + 1 );
+                    $sep = '';
+                } else {
+                    $words_array = preg_split( "/[\n\r\t ]+/", $text, $num_words + 1, PREG_SPLIT_NO_EMPTY );
+                    $sep = ' ';
+                }
+            
+                if ( count( $words_array ) > $num_words ) {
+                    array_pop( $words_array );
+                    $text = implode( $sep, $words_array );
+                    $text = $text . $more;
+                } else {
+                    $text = implode( $sep, $words_array );
+                    $text = $text . $more;
+                }
+        }
+        return $text;
+}
