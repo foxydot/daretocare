@@ -8315,6 +8315,13 @@ Site Footer
 .sectioned-page-wrapper .section .section-body .wrap {
   padding: 2rem 0;
 }
+.sectioned-page-wrapper .section .section-body a,
+.sectioned-page-wrapper .section .section-body a:visited {
+  color: #046a38;
+}
+.sectioned-page-wrapper .section .section-body a:hover {
+  color: #8DC63F;
+}
 .sectioned-page-wrapper .section .section-body:after {
   content: ".";
   display: block;
