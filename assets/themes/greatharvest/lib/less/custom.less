@@ -490,42 +490,51 @@ form{
       .su-spoiler{
         .su-spoiler-title{}
         .su-spoiler-content{
-          background: fade(@ltgrey,15%);
-          padding: 1em;
-          article{
-            .entry-header{
-              .entry-title,.entry-subtitle{
-                display: inline;
-                font-size: 1.4em;
-                font-weight: 600;
-                margin: 0;
-                border: 0;
-                line-height: 1.25;
-              }
-              .entry-meta{
-                font-size: 0.8em;
-                margin-bottom: 0.5em;
-                position: relative;
-                span{
+          padding: 0;
+          .articles{          
+            background: fade(@ltgrey,15%);
+            padding: 1em;
+            article{
+              margin-bottom: 1em;
+              .entry-header{
+                .entry-title,.entry-subtitle{
                   display: inline;
+                  font-size: 1.4em;
+                  font-weight: 600;
+                  border: 0;
+                  line-height: 1.25;
                 }
-                time{
-                  position: absolute;
-                  top: -0.5em;
-                  right: 0;
-                  padding: 0.5em;
-                  background: @white;
-                }
-                a{
-                  color: @orange;
+                .entry-meta{
+                  font-size: 0.8em;
+                  margin-bottom: 0.5em;
+                  position: relative;
+                  span{
+                    display: inline;
+                  }
+                  time{
+                    position: absolute;
+                    top: -0.5em;
+                    right: 0;
+                    padding: 0.5em;
+                    background: @white;
+                  }
+                  a{
+                    color: @orange;
+                  }
                 }
               }
+              .entry-content{
+                background: @white;
+                padding: 1em;
+              }
+              .entry-footer{}
             }
-            .entry-content{
-              background: @white;
-              padding: 1em;
-            }
-            .entry-footer{}
+          }
+          .related{
+            display: block;
+            padding: 0.5em 1em;
+            background: @orange;
+            color: @white;
           }
         }
       }

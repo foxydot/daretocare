@@ -5,6 +5,8 @@ function msdlab_replace_generic_loop(){
     if(is_home()){
         remove_action('genesis_loop','genesis_do_loop');
         add_action('genesis_loop','msdlab_custom_loop_by_cat');
+        remove_action('genesis_entry_content','genesis_do_post_content');
+        add_action('genesis_entry_content','the_excerpt');
     }
 }
 
@@ -27,7 +29,7 @@ function msdlab_custom_loop_by_cat(){
         if(count($subcats)==0){
         $args = array(
             'cat'              => $cat->term_id,
-            'showposts'        => 8,
+            'showposts'        => 3,
         );
         $wp_query = new WP_Query( $args );
         
@@ -44,7 +46,7 @@ function msdlab_custom_loop_by_cat(){
                 <span class="su-spoiler-icon"></span>
                 '.$cat->name.'
                 </div>
-                <div class="su-spoiler-content su-clearfix">';
+                <div class="su-spoiler-content su-clearfix"><div class="articles">';
             }
             while ( have_posts() ) : the_post();
     
@@ -70,7 +72,10 @@ function msdlab_custom_loop_by_cat(){
     
             endwhile; //* end of one post
             if(class_exists('Su_Shortcodes')){
-                print '</div></div>';
+                print '</div>';
+                print '<a href="'.get_category_link($cat->term_id).'" class="related">More Related Articles</a>';
+                print '</div>';
+                print '</div>';
             }
             
         endif; //* end loop
